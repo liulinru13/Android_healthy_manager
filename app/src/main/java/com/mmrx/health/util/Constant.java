@@ -10,4 +10,6 @@ public class Constant {
     public static final String FRAGMENT_TAG_SLEEP= "toSleep";
     public static final String FRAGMENT_TAG_DRUG = "toDrug";
     public static final String FRAGMENT_TAG_BUILD = "toBuild";
+
+    public static final String BODY_BUILDING_BEAN_ID = "bodyBuildingBeanId";
 }

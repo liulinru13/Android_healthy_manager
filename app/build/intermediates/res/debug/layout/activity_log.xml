@@ -137,4 +137,4 @@
         android:layout_marginTop="20dp"
         android:layout_below="@id/log_lay_gender"/>
     
-</RelativeLayout><!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/src/main/res/layout/activity_log.xml -->
+</RelativeLayout><!-- From: file:/G:/GitHub/Android_manager/app/src/main/res/layout/activity_log.xml -->

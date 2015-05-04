@@ -75,6 +75,14 @@
             android:name="com.mmrx.health.BaseActivity"
             android:label="@string/title_activity_base" >
         </activity>
+        <activity
+            android:name="com.mmrx.health.activity.BodyBuildingSettingActivity"
+            android:label="@string/title_activity_body_building_setting"
+            android:parentActivityName="com.mmrx.health.BaseActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mmrx.health.BaseActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -47,4 +47,4 @@
         android:layout_marginBottom="30dp"
         android:textSize="@dimen/text_size_large" />
 
-</RelativeLayout><!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/src/main/res/layout/activity_home.xml -->
+</RelativeLayout><!-- From: file:/G:/GitHub/Android_manager/app/src/main/res/layout/activity_home.xml -->

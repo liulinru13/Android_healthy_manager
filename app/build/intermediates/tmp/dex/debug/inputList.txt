@@ -1,7 +1,0 @@
-G:\AndroidStudioProjects\Android_manager\app\build\intermediates\classes\debug
-G:\AndroidStudioProjects\Android_manager\app\build\intermediates\pre-dexed\debug\classes-ec09d7dcbcb0be1627099770647601fa3e98676e.jar
-G:\AndroidStudioProjects\Android_manager\app\build\intermediates\pre-dexed\debug\classes-b274351632c8b526f3ca71f019c38c3096db5c0c.jar
-G:\AndroidStudioProjects\Android_manager\app\build\intermediates\pre-dexed\debug\library-2.4.0-16e54a4a3ad0c6f01775be31e57822507d71cabd.jar
-G:\AndroidStudioProjects\Android_manager\app\build\intermediates\pre-dexed\debug\xUtils-2.6.14-09d4a908a2fe2deddd3a385925b42b1e98fe9f56.jar
-G:\AndroidStudioProjects\Android_manager\app\build\intermediates\pre-dexed\debug\classes-e2b1883fa47ba3ad233ae43ed399368b0b08cbb1.jar
-G:\AndroidStudioProjects\Android_manager\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-885bcd908707996ba885ebe0cc36f9e2815c0f11.jar

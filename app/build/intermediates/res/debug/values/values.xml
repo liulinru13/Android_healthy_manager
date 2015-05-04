@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/G:/GitHub/Android_manager/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="home_state_arr">
         <item>微胖</item>
     </string-array>
-    <!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
+    <!-- From: file:/G:/GitHub/Android_manager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="actionBarDivider"/>
     <attr format="reference" name="actionBarItemBackground"/>
@@ -79,7 +79,7 @@
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
-    <!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/G:/GitHub/Android_manager/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="black">#ff000000</color>
     <color name="bottom_bar_normal">#ffe4e4e4</color>
@@ -110,7 +110,7 @@
     <declare-styleable name="Theme"><attr format="reference" name="actionDropDownStyle"/><attr format="dimension" name="dropdownListPreferredItemHeight"/><attr format="reference" name="popupMenuStyle"/><attr format="dimension" name="panelMenuListWidth"/><attr format="reference" name="panelMenuListTheme"/><attr format="reference" name="listChoiceBackgroundIndicator"/></declare-styleable>
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/></declare-styleable>
     <declare-styleable name="metroView"><attr format="string" name="metroTitle"/><attr format="string" name="metroDetail"/><attr format="reference" name="metroIconRef"/><attr format="enum" name="metroStyle"><enum name="horizontal_icon_text" value="1"/><enum name="vertical_icon_text" value="2"/><enum name="only_icon" value="3"/></attr><attr format="dimension" name="metroTitleTextSize"/><attr format="dimension" name="metroDetailTextSize"/><attr format="color" name="metroBackground"/><attr format="reference" name="metroIsCheckIcon"/></declare-styleable>
-    <!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
+    <!-- From: file:/G:/GitHub/Android_manager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_default_height">48dip</dimen>
     <dimen name="abc_action_bar_icon_vertical_padding">8dip</dimen>
@@ -129,18 +129,18 @@
     <dimen name="abc_panel_menu_list_width">296dp</dimen>
     <dimen name="abc_search_view_preferred_width">320dip</dimen>
     <dimen name="abc_search_view_text_min_width">160dip</dimen>
-    <!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/G:/GitHub/Android_manager/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="bottom_bar_height">60dp</dimen>
-    <!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
+    <!-- From: file:/G:/GitHub/Android_manager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
     <item name="dialog_fixed_width_major" type="dimen">320dp</item>
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
-    <!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/G:/GitHub/Android_manager/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="element_horizontal_margin">10dp</dimen>
     <dimen name="element_vertical_margin">10dp</dimen>
@@ -152,7 +152,7 @@
     <dimen name="title_bar_height">50dp</dimen>
     <dimen name="title_bar_menu_height">20dp</dimen>
     <dimen name="title_bar_menu_width">20dp</dimen>
-    <!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
+    <!-- From: file:/G:/GitHub/Android_manager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
     <eat-comment/>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_menu_divider" type="id"/>
@@ -174,10 +174,15 @@
     <string name="abc_searchview_description_voice">Voice search</string>
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
-    <!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/G:/GitHub/Android_manager/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">Android_manager</string>
+    <string name="body_check_state_false">暂不打卡</string>
+    <string name="body_check_state_true">列入计划</string>
+    <string name="body_check_str">已打卡</string>
+    <string name="body_day_str">天</string>
+    <string name="body_title">健身计划</string>
     <string name="bottom_bar_bui_str">健身</string>
     <string name="bottom_bar_eat_str">饮食</string>
     <string name="bottom_bar_med_str">药品</string>
@@ -230,6 +235,7 @@
     <string name="title_activity_alarm">AlarmActivity</string>
     <string name="title_activity_alert">AlertActivity</string>
     <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_body_building_setting">BodyBuildingSettingActivity</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_log">LogActivity</string>
     <string name="title_activity_manage">ManageActivity</string>
@@ -238,7 +244,7 @@
     <string name="title_activity_save_drug">SaveDrugActivity</string>
     <string name="title_activity_setting">SettingActivity</string>
     <string name="title_default_str">标题</string>
-    <!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/G:/GitHub/Android_manager/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="ActivityMarginStyle">
         <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
@@ -277,7 +283,7 @@
         <item name="android:textColor">#000</item>
         <item name="android:textSize">@dimen/text_size_small</item>
     </style>
-    <!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
+    <!-- From: file:/G:/GitHub/Android_manager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.AppCompat.Base.CompactMenu.Dialog" parent="android:TextAppearance.Medium">
         <item name="android:textColor">@android:color/primary_text_light</item>

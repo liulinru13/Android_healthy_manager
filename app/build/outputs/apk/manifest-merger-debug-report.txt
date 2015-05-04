@@ -144,3 +144,17 @@ ADDED from AndroidManifest.xml:73:9
 		ADDED from AndroidManifest.xml:75:13
 	android:name
 		ADDED from AndroidManifest.xml:74:13
+activity#com.mmrx.health.activity.BodyBuildingSettingActivity
+ADDED from AndroidManifest.xml:77:9
+	android:label
+		ADDED from AndroidManifest.xml:79:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:80:13
+	android:name
+		ADDED from AndroidManifest.xml:78:13
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from AndroidManifest.xml:81:13
+	android:value
+		ADDED from AndroidManifest.xml:83:17
+	android:name
+		ADDED from AndroidManifest.xml:82:17
