@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_bar_height"
+    android:layout_alignParentBottom="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="4">
+        <!--android:descendantFocusability="beforeDescendants"
+            beforeDescendants：viewgroup会优先其子类控件而获取到焦点
+            afterDescendants：viewgroup只有当其子类控件不需要获取焦点时才获取焦点
+            blocksDescendants：viewgroup会覆盖子类控件而直接获得焦点
+        -->
+        <LinearLayout
+            android:id="@+id/bottom_bar_eat"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:descendantFocusability="beforeDescendants"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottom_bar_eat_bn"
+                style="@style/BottomBarButtomNormal"
+                android:background="@color/bottom_bar_pressed"
+                android:text="@string/bottom_bar_eat_str"
+                android:clickable="false"
+                android:textColor="@color/bottom_bar_text_pressed"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_bar_sle"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:descendantFocusability="beforeDescendants"
+            android:layout_weight="1">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottom_bar_sle_bn"
+                android:text="@string/bottom_bar_sle_str"
+                android:clickable="false"
+                style="@style/BottomBarButtomNormal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_bar_med"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:descendantFocusability="beforeDescendants"
+            android:layout_weight="1">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottom_bar_med_bn"
+                android:text="@string/bottom_bar_med_str"
+                android:clickable="false"
+                style="@style/BottomBarButtomNormal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_bar_building"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:descendantFocusability="beforeDescendants"
+            android:layout_weight="1">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottom_bar_bui_bn"
+                android:text="@string/bottom_bar_bui_str"
+                android:clickable="false"
+                style="@style/BottomBarButtomNormal"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+<!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/src/main/res/layout/bottom_bar.xml -->

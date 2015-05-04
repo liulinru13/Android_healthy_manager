@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity" >
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bmi_tv"
+        android:layout_centerHorizontal="true"
+        android:text="@string/home_bmi"
+        android:textColor="#a1a0a0"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/bmi_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:text="0"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/bmi_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bmi_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/home_state"
+        android:textColor="#b1b0b0"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/bmi_tv_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/home_begin"
+        android:textColor="#a1a0a0"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:textSize="@dimen/text_size_large" />
+
+</RelativeLayout>

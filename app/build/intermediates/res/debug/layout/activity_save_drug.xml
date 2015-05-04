@@ -1,0 +1,120 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titlebar_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/title_bar"
+        android:layout_alignParentTop="true"/>
+
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SaveDrugActivity"
+        android:layout_margin="@dimen/activity_horizontal_margin" >
+
+        <TextView
+            android:id="@+id/sd_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/drug_save_title"
+            style="@style/FormTextTitleSytle"/>
+        <LinearLayout
+            android:id="@+id/sd_lay_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sd_tv_title"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/drug_save_drug_name_str"
+                style="@style/FormTextSytle"/>
+            <EditText
+                android:id="@+id/sd_et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="13"/>
+        </LinearLayout>
+
+         <LinearLayout
+            android:id="@+id/sd_lay_produce_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sd_lay_name"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/drug_save_drug_produce_time"
+                style="@style/FormTextSytle"/>
+            <EditText
+                android:id="@+id/sd_et_year"
+                android:layout_width="50dp"
+                android:inputType="number"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/drug_save_year"
+                style="@style/FormTextSytle"/>
+            <EditText
+                android:id="@+id/sd_et_month"
+                android:layout_width="50dp"
+                android:inputType="number"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/drug_save_month"
+                style="@style/FormTextSytle"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/sd_lay_guarantee_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sd_lay_produce_time"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/drug_save_guarantee_period"
+                style="@style/FormTextSytle"/>
+            <EditText
+                android:id="@+id/sd_et_baozhiqi"
+                android:layout_width="50dp"
+                android:inputType="number"
+                android:layout_height="wrap_content"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/drug_save_month_num"
+                 style="@style/FormTextSytle"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sd_but_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/drug_save_submit"
+            android:textSize="@dimen/text_size_media"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/sd_lay_guarantee_period"
+            android:background="@drawable/button"
+            style="@style/ActivityMarginStyle"/>
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/src/main/res/layout/activity_save_drug.xml -->

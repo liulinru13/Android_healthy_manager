@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/titlebar_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/title_bar"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:id="@+id/mood_lay_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlebar_layout"
+        style="@style/ActivityMarginStyle"
+        android:layout_marginTop="20dp"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/mood_et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <Button
+            android:id="@+id/mood_but_dismiss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textSize="@dimen/text_size_small"
+            android:text="@string/mood_sure"
+            android:background="@drawable/button"/>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/mood_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mood_lay_input"
+        android:checkedButton="@+id/mood_rb1"
+        android:orientation="horizontal"
+        style="@style/ActivityMarginStyle">
+
+        <RadioButton
+            android:id="@+id/mood_rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mood_good" />
+
+        <RadioButton
+            android:id="@+id/mood_rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mood_normal" />
+
+        <RadioButton
+            android:id="@+id/mood_rb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mood_bad" />
+    </RadioGroup>
+
+    <com.fortysevendeg.swipelistview.SwipeListView
+        android:id="@+id/mood_swipe_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="#00000000"
+        swipe:swipeActionRight="reveal"
+        swipe:swipeAnimationTime="0"
+        swipe:swipeBackView="@+id/back"
+        swipe:swipeCloseAllItemsWhenMoveList="true"
+        swipe:swipeFrontView="@+id/front"
+        swipe:swipeMode="left"
+        swipe:swipeOffsetLeft="280dp"
+        swipe:swipeOpenOnLongPress="false"
+        android:layout_below="@id/mood_rg"/>
+
+</RelativeLayout>

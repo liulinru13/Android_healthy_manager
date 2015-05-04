@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mood_list_item_height"
+        android:background="@color/red"
+        android:gravity="center|right"
+        android:weightSum="1">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_delete"
+            android:layout_weight="0.05" />
+        <TextView
+            android:id="@+id/mood_tv_delete"
+            android:layout_width="60dp"
+            android:layout_marginRight="@dimen/element_horizontal_margin"
+            android:layout_height="match_parent"
+            android:text="@string/mood_delete"
+            android:layout_gravity="center"
+            android:textSize="@dimen/text_size_media"
+            android:textColor="@color/gray_default"
+            android:gravity="center_horizontal|center_vertical"/>
+
+    </LinearLayout>
+
+       <RelativeLayout
+        android:id="@+id/front"
+        android:layout_height="@dimen/mood_list_item_height"
+        android:layout_width="match_parent"
+        android:background="@color/white" >
+        <TextView
+            android:id="@+id/mood_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00-00"
+            android:layout_marginTop="@dimen/element_vertical_margin"
+            android:layout_marginLeft="@dimen/element_horizontal_margin"/>
+        <TextView
+            android:id="@+id/mood_tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/mood_tv_time"
+            android:layout_marginTop="@dimen/element_vertical_margin"
+            android:text="00-00"
+            android:textSize="@dimen/text_size_small"/>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tran">#00000000</color>
+    <color name="white">#fff</color>
+    <color name="gray_press">#b7b6b6</color>
+    <color name="gray_default">#ffd7d6d6</color>
+    <color name="red">#e64c4e</color>
+    <color name="gray">#ff959494</color>
+    <color name="black">#ff000000</color>
+
+    <color name="bottom_bar_normal">#ffe4e4e4</color>
+    <color name="bottom_bar_pressed">#e64c4e</color>
+    <color name="bottom_bar_text_normal">#ff000000</color>
+    <color name="bottom_bar_text_pressed">#ffffffff</color>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp" >
+    
+    
+    <TextView 
+        android:id="@+id/sitem_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a"
+        android:layout_centerVertical="true"/>
+    <CheckBox 
+        android:id="@+id/sitem_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="是否提示"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout><!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/src/main/res/layout/setitem.xml -->

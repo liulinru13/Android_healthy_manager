@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="G:\AndroidStudioProjects\Android_manager\lib\swipelistview\res"><file path="G:\AndroidStudioProjects\Android_manager\lib\swipelistview\res\values\swipelistview__attrs.xml" qualifiers=""><declare-styleable name="SwipeListView">
+        <attr format="boolean" name="swipeOpenOnLongPress"/>
+        <attr format="integer" name="swipeAnimationTime"/>
+        <attr format="dimension" name="swipeOffsetLeft"/>
+        <attr format="dimension" name="swipeOffsetRight"/>
+        <attr format="boolean" name="swipeCloseAllItemsWhenMoveList"/>
+        <attr format="reference" name="swipeFrontView"/>
+        <attr format="reference" name="swipeBackView"/>
+        <attr format="enum" name="swipeMode">
+            <enum name="none" value="0"/>
+            <enum name="both" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="left" value="3"/>
+        </attr>
+        <attr format="enum" name="swipeActionLeft">
+            <enum name="reveal" value="0"/>
+            <enum name="dismiss" value="1"/>
+            <enum name="choice" value="2"/>
+        </attr>
+        <attr format="enum" name="swipeActionRight">
+            <enum name="reveal" value="0"/>
+            <enum name="dismiss" value="1"/>
+            <enum name="choice" value="2"/>
+        </attr>
+        <attr format="reference" name="swipeDrawableChecked"/>
+        <attr format="reference" name="swipeDrawableUnchecked"/>
+    </declare-styleable></file></source><source path="G:\AndroidStudioProjects\Android_manager\lib\swipelistview\build\generated\res\rs\release"/><source path="G:\AndroidStudioProjects\Android_manager\lib\swipelistview\build\generated\res\generated\release"/></dataSet><dataSet config="release"><source path="G:\AndroidStudioProjects\Android_manager\lib\swipelistview\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="SwipeListView"><attr format="boolean" name="swipeOpenOnLongPress"/><attr format="integer" name="swipeAnimationTime"/><attr format="dimension" name="swipeOffsetLeft"/><attr format="dimension" name="swipeOffsetRight"/><attr format="boolean" name="swipeCloseAllItemsWhenMoveList"/><attr format="reference" name="swipeFrontView"/><attr format="reference" name="swipeBackView"/><attr format="enum" name="swipeMode"><enum name="none" value="0"/><enum name="both" value="1"/><enum name="right" value="2"/><enum name="left" value="3"/></attr><attr format="enum" name="swipeActionLeft"><enum name="reveal" value="0"/><enum name="dismiss" value="1"/><enum name="choice" value="2"/></attr><attr format="enum" name="swipeActionRight"><enum name="reveal" value="0"/><enum name="dismiss" value="1"/><enum name="choice" value="2"/></attr><attr format="reference" name="swipeDrawableChecked"/><attr format="reference" name="swipeDrawableUnchecked"/></declare-styleable></configuration></mergedItems></merger>

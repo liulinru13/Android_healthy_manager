@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android_manager</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_log">LogActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_manage">ManageActivity</string>
+    <string name="title_activity_alert">AlertActivity</string>
+    <string name="title_activity_alarm">AlarmActivity</string>
+    <string name="title_activity_save_drug">SaveDrugActivity</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="title_activity_mood">MoodActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <!--title_bar-->
+    <string name="title_default_str">标题</string>
+    <!--bottom_bar-->
+    <string name="bottom_bar_eat_str">饮食</string>
+    <string name="bottom_bar_sle_str">睡眠</string>
+    <string name="bottom_bar_med_str">药品</string>
+    <string name="bottom_bar_bui_str">健身</string>
+    <!--tab_item-->
+    <string name="tab_item_mood_str">我的心情记录</string>
+    <string name="tab_item_medi_str">我的药品录入</string>
+    <string name="tab_item_medi_notice_str">我的服药提醒</string>
+    <string name="tab_item_quit_str">退出当前记录</string>
+
+    <string name="male">男</string>
+    <string name="female">女</string>
+
+    <!--home-->
+    <string name="home_bmi">您的当前BMI指数：</string>>
+    <string name="home_state">微胖</string>>
+    <string name="home_begin">开始管理我的生活>>></string>>
+    <string-array name="home_state_arr">
+        <item>微胖</item>
+    </string-array>
+    <!-- fragment_sleep-->
+    <string name="sleep_age_str">您的年龄为：</string>
+    <string name="sleep_sleep_str">最佳睡眠时间为：</string>
+    <string name="sleep_sleep_notice_str">点击开启早睡提醒>></string>
+
+    <!--fragment_eat-->
+    <string name="eat_layout_title">今日摄入量(单位：克)</string>
+    <string name="eat_layout_vegatable">蔬菜：</string>
+    <string name="eat_layout_meat">肉类：</string>
+    <string name="eat_layout_crop">主食：</string>
+    <string name="eat_layout_result">计算</string>
+
+    <!--fragment_drug-->
+    <string name="drug_layout_default_str">暂时没有药品哦~！！</string>
+    
+    <!--fragment_drug save-->
+    <string name="drug_save_title">药品录入</string>
+    <string name="drug_save_drug_name_str">药物名称：</string>
+    <string name="drug_save_drug_produce_time">生产日期：</string>
+    <string name="drug_save_year">年</string>
+    <string name="drug_save_month">月</string>
+    <string name="drug_save_guarantee_period">保 质 期：</string>
+    <string name="drug_save_month_num">个月</string>
+    <string name="drug_save_submit">提交</string>
+
+    <!--mood-->
+    <string name="mood_sure">确定</string>
+    <string name="mood_default">您还没有心情记录</string>
+    <string name="mood_good">心情好</string>
+    <string name="mood_normal">心情一般</string>
+    <string name="mood_bad">心情不好</string>
+    <string name="mood_delete">删除</string>
+
+    <!--log-->
+    <string name="log_info">请输入您的信息</string>
+    <string name="log_name">姓名：</string>
+    <string name="log_height">身高：</string>
+    <string name="log_weight">体重：</string>
+    <string name="log_age">年龄：</string>
+    <string name="log_sex">性别：</string>
+
+
+    <!--result-->
+    <string name="result_title">您当前的的bmi指数为：</string>
+    <string name="result_calorie">您当前的所需热量为：</string>
+    <string name="result_calorie_now">您当前摄入热量为：</string>
+    <string name="result_result_default">  计算结果为一般情况，食物中如果含有高蛋白，高油脂，油炸类食物，摄入量会高1~2倍不等，具体情况具体分析，倡导大家要保持身材哦！！！</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <!--bodyBuilding-->
+    <string name="body_title">健身计划</string>
+    <string name="body_check_str">已打卡</string>
+    <string name="body_day_str">天</string>
+    <string name="body_check_state_true">列入计划</string>
+    <string name="body_check_state_false">暂不打卡</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_body_building_setting">BodyBuildingSettingActivity</string>
+</resources>

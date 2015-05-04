@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp" >
+
+    <TextView
+        android:id="@+id/eat_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/eat_layout_title"
+        style="@style/FormTextTitleSytle"/>
+    
+    <LinearLayout 
+        android:id="@+id/eat_lay_shucai"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/eat_tv_title">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eat_layout_vegatable"
+            style="@style/FormTextSytle"/>
+        <EditText 
+            android:id="@+id/eat_et_shucai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/eat_lay_roulei"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/eat_lay_shucai">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eat_layout_meat"
+            style="@style/FormTextSytle"/>
+        <EditText 
+            android:id="@+id/eat_et_roulei"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </LinearLayout>
+
+     <LinearLayout 
+        android:id="@+id/eat_lay_zhushi"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/eat_lay_roulei">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eat_layout_crop"
+            style="@style/FormTextSytle"/>
+        <EditText 
+            android:id="@+id/eat_et_zhushi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </LinearLayout>
+    
+     <Button
+         android:id="@+id/eat_but_dismiss"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@drawable/button"
+         android:text="@string/eat_layout_result"
+         android:textSize="@dimen/text_size_media"
+         android:layout_marginTop="20dp"
+         android:layout_below="@+id/eat_lay_zhushi"
+         style="@style/ActivityMarginStyle"/>
+</RelativeLayout><!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/src/main/res/layout/fragment_eat.xml -->

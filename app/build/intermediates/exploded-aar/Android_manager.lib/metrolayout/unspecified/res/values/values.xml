@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/G:/AndroidStudioProjects/Android_manager/lib/metrolayout/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="red">#e64c4e</color>
+    <declare-styleable name="metroView"><attr format="string" name="metroTitle"/><attr format="string" name="metroDetail"/><attr format="reference" name="metroIconRef"/><attr format="enum" name="metroStyle"><enum name="horizontal_icon_text" value="1"/><enum name="vertical_icon_text" value="2"/><enum name="only_icon" value="3"/></attr><attr format="dimension" name="metroTitleTextSize"/><attr format="dimension" name="metroDetailTextSize"/><attr format="color" name="metroBackground"/><attr format="reference" name="metroIsCheckIcon"/></declare-styleable>
+    <!-- From: file:/G:/AndroidStudioProjects/Android_manager/lib/metrolayout/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">MetroLayout</string>
+</resources>

@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity" >
+
+    <include
+        android:id="@+id/titlebar_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/title_bar"
+        android:layout_alignParentTop="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlebar_layout"
+        style="@style/ActivityMarginStyle">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="41dp"
+            android:text="@string/result_title"
+            style="@style/FormTextTitleSytle"/>
+
+        <TextView
+            android:id="@+id/re_tv_bmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="0"
+            style="@style/FormTextTitleSytle"/>
+
+        <LinearLayout
+            android:id="@+id/re_lay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/re_tv_bmi"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/result_calorie"
+                style="@style/FormTextSytle"/>
+
+            <TextView
+                android:id="@+id/re_tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:gravity="right"
+                android:textSize="@dimen/text_size_media" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/re_lay2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/re_lay1"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/result_calorie_now"
+                style="@style/FormTextSytle"/>
+
+            <TextView
+                android:id="@+id/re_tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:gravity="right"
+                android:textSize="@dimen/text_size_media" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/re_lay2"
+            android:text="@string/result_result_default"
+            android:textSize="@dimen/text_size_small"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout><!-- From: file:/G:/AndroidStudioProjects/Android_manager/app/src/main/res/layout/activity_result.xml -->

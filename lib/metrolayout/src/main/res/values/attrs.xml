@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="metroView">
+        <attr name="metroTitle" format="string"/>
+        <attr name="metroDetail" format="string"/>
+        <attr name="metroIconRef" format="reference"/>
+    <!--    <attr name="metroWeight" format="enum">
+            <enum name="whole_row" value="1"/>
+            <enum name="half_row" value="2"/>
+            <enum name="one_third_row" value="3"/>
+        </attr>
+        -->
+        <attr name="metroStyle" format="enum">
+            <enum name="horizontal_icon_text" value="1"/>
+            <enum name="vertical_icon_text" value="2"/>
+            <enum name="only_icon" value="3"/>
+        </attr>
+        <attr name="metroTitleTextSize" format="dimension"/>
+        <attr name="metroDetailTextSize" format="dimension"/>
+        <attr name="metroBackground" format="color"/>
+        <attr name="metroIsCheckIcon" format="reference"/>
+    </declare-styleable>
+
+</resources>
