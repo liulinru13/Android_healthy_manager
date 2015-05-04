@@ -49,6 +49,17 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="RowStyle_large" parent="FormTextTitleSytle">
+        <item name="android:layout_height">@dimen/body_build_detail_row_height</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="RowStyle_media" parent="FormTextTitleSytle">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:layout_height">@dimen/body_build_detail_row_media_height</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
 
 
 </resources>

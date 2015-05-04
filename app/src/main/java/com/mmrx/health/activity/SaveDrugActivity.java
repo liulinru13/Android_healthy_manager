@@ -57,6 +57,7 @@ public class SaveDrugActivity extends BaseActivity implements OnClickListener{
 
         mBackBut = (ImageButton)findViewById(R.id.title_bar_back);
         mBackBut.setOnClickListener(this);
+
         mTitleTv = (TextView)findViewById(R.id.title_bar_title);
         mTitleTv.setText("药品录入");
         but_more = (Button)findViewById(R.id.title_bar_menu);

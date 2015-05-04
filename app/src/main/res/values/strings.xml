@@ -93,7 +93,38 @@
     <string name="body_check_state_true">列入计划</string>
     <string name="body_check_state_false">暂不打卡</string>
 
+    <!--bodyBuilding detail-->
+    <string name="body_detail_title">计划名称：</string>
+    <string name="body_detail_title_hint">五个汉字以内</string>
+    <string name="body_detail_detail">详细内容：</string>
+    <string name="body_detail_detail_hint">十个汉字以内</string>
+    <string name="body_detail_plan_type">运动类型：</string>
+    <string name="body_detail_card_type">卡片样式：</string>
+    <string name="body_detail_card_color">卡片颜色：</string>
+    <string name="body_detail_is_check">是否打卡：</string>
+    <string name="body_detail_is_check_yse">是</string>
+    <string name="body_detail_is_check_no">否</string>
+    <string name="body_detail_save">保存计划</string>
+    <string name="body_detail_quit">取消保存</string>
+
+    <string-array name="body_detail_plan_type_arr">
+        <item>篮球</item>
+        <item>骑行</item>
+        <item>足球</item>
+        <item>跑步</item>
+        <item>游泳</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="body_detail_card_type_arr">
+        <item>水平</item>
+        <item>竖直</item>
+        <item>图标</item>
+    </string-array>
+
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_body_building_setting">BodyBuildingSettingActivity</string>
+    <string name="title_activity_body_building_setting_detail">BodyBuildingSettingDetailActivity
+    </string>
 </resources>

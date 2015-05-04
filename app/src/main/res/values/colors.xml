@@ -5,6 +5,7 @@
     <color name="gray_press">#b7b6b6</color>
     <color name="gray_default">#ffd7d6d6</color>
     <color name="red">#e64c4e</color>
+    <color name="red_pressed">#ffe61702</color>
     <color name="gray">#ff959494</color>
     <color name="black">#ff000000</color>
 
