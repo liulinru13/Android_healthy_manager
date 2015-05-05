@@ -178,7 +178,8 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
 
         if (currentTabsIndex!=index) {
             FragmentTransaction trx = getFragmentManager().beginTransaction();
-            trx.hide(fragments[currentTabsIndex]);
+            hideAllFragment(trx);
+//            trx.hide(fragments[currentTabsIndex]);
             if (!fragments[index].isAdded()) {
                 trx.add(R.id.id_content, fragments[index]);
             }
@@ -207,6 +208,20 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
                 .setBackgroundColor(getResources().getColor(R.color.bottom_bar_normal));
         ((Button)mBottomBn_bui.findViewById(R.id.bottom_bar_bui_bn)).
                 setTextColor(getResources().getColor(R.color.bottom_bar_text_normal));
+    }
+
+    /**
+     * 隐藏所有fragment
+     * */
+    private void hideAllFragment(FragmentTransaction transaction){
+        if(drugFragment != null)
+            transaction.hide(drugFragment);
+        if(eatFragment != null)
+            transaction.hide(eatFragment);
+        if(sleepFrament != null)
+            transaction.hide(sleepFrament);
+        if(buildFrament != null)
+            transaction.hide(buildFrament);
     }
 
 	class MyDialog extends Dialog {

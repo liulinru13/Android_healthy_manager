@@ -38,32 +38,8 @@ public class BodyBuildingFragment extends Fragment {
     MetroAdapter mMetroAdapter;
     DbUtils mDb;
     TextView adf;
-
-    Thread mInitThread = new Thread(new Runnable() {
-        @Override
-        public void run() {
-            ArrayList<AbsMetroNode> list_temp = new ArrayList<AbsMetroNode>();
-//            DbUtils mDb_temp = DbUtils.create(BodyBuildingFragment.this.getActivity());
-
-            try{
-                List<BodyBuildingBean> listFromDb = mDb.findAll(BodyBuildingBean.class);
-                if(listFromDb != null) {
-                    for (BodyBuildingBean bbb:listFromDb) {
-                        list_temp.add(bbb);
-                    }
-                    mMetroAdapter.setNodeList(list_temp);
-//            mMetroAdapter.postInvalidateMv();
-                    //通知刷新
-                    Message message = new Message();
-                    message.what = Constant.MESSAGE_UPDATE_BODY_FRAGMENT;
-                    mHandler.sendMessage(message);
-                }
-            }catch (DbException dbe){
-                dbe.printStackTrace();
-            }
-
-        }
-    });
+    //刷新线程
+    ReflashMetroLayoutThread mInitThread;
 
     Handler mHandler = new Handler(){
         @SuppressLint("NewApi")
@@ -72,7 +48,6 @@ public class BodyBuildingFragment extends Fragment {
                 for(LinearLayout ll:mMetroAdapter.getLayoutList()){
                     mLinearLayout.addView(ll);
                 }
-
             }
 
         };
@@ -100,7 +75,7 @@ public class BodyBuildingFragment extends Fragment {
         mMetroAdapter = new MetroAdapter(mlist,getActivity());
 
         /**
-         * 测试
+         * 测试按钮
          * */
         adf = (TextView)mInflater.findViewById(R.id.test);
         adf.setOnClickListener(new View.OnClickListener() {
@@ -117,10 +92,53 @@ public class BodyBuildingFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        /**
-         * 此处有bug，按返回键太快时
-         * */
+        mInitThread = new ReflashMetroLayoutThread();
         mInitThread.start();
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        //打断线程
+        if(mInitThread.isAlive())
+            mInitThread.interrupt();
+    }
+
+    private class ReflashMetroLayoutThread extends Thread{
+        /**
+         * 这个是否刷新需不需要在xml里面保存一下，只要没有修改过db里面的相关内容，就还是
+         * 用原来的东西，修改后再重新刷新
+         * */
+        private boolean needReflash;
+        @Override
+        public void run() {
+            if(needReflash) {
+                ArrayList<AbsMetroNode> list_temp = new ArrayList<AbsMetroNode>();
+//            DbUtils mDb_temp = DbUtils.create(BodyBuildingFragment.this.getActivity());
+                try {
+                    List<BodyBuildingBean> listFromDb = mDb.findAll(BodyBuildingBean.class);
+                    if (listFromDb != null) {
+                        for (BodyBuildingBean bbb : listFromDb) {
+                            list_temp.add(bbb);
+                        }
+                        mMetroAdapter.setNodeList(list_temp);
+//            mMetroAdapter.postInvalidateMv();
+                        //通知刷新
+                        Message message = new Message();
+                        message.what = Constant.MESSAGE_UPDATE_BODY_FRAGMENT;
+                        mHandler.sendMessage(message);
+                    }
+                } catch (DbException dbe) {
+                    dbe.printStackTrace();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                this.needReflash = false;
+            }
+        }//end run
+
+        public void setNeedReflash(boolean isNeed){
+            this.needReflash = isNeed;
+        }
+    };
 }
