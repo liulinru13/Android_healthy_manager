@@ -97,15 +97,7 @@ public class LogActivity extends BaseActivity {
 			return;
 		}
 		int age = Integer.parseInt(str_age);
-		
-		
-		
-//		String gender = et_gender.getText().toString();
-//		if ("".equals(gender)) {
-//			T.showShort(getApplicationContext(), "����������Ա�");
-//			return;
-//		}
-//		
+
 		User u=new User(name, age, gender, tall, weight);
 		SPutil putil=new SPutil(getApplicationContext());
         putil.WriteLogin(true);

@@ -87,10 +87,10 @@ public class BodyBuildingSettingActivity extends BaseActivity implements View.On
                 startActivity(intent);
                 break;
             case R.id.title_bar_add:
-//                intent.setClass(this,ManageActivity.class);
-                //-1表示新建
-//                intent.putExtra(Constant.BODY_BUILDING_BEAN_ID,-1);
-//                startActivity(intent);
+                intent.setClass(this,BodyBuildingSettingDetailActivity.class);
+//                -1表示新建
+                intent.putExtra(Constant.BODY_BUILDING_BEAN_ID,-1);
+                startActivity(intent);
                 break;
             default:
                 break;
@@ -104,9 +104,9 @@ public class BodyBuildingSettingActivity extends BaseActivity implements View.On
             super.onClickFrontView(position);
 //            Toast.makeText(getApplicationContext(), m_list.get(position).toString(), Toast.LENGTH_SHORT).show();
             //获取bean的id，传入到具体的健身计划设置页面
-//            Intent intent = new Intent(BodyBuildingSettingActivity.this,);
-//            intent.putExtra(Constant.BODY_BUILDING_BEAN_ID,mlist.get(position).getId());
-//            startActivity(intent);
+            Intent intent = new Intent(BodyBuildingSettingActivity.this,BodyBuildingSettingDetailActivity.class);
+            intent.putExtra(Constant.BODY_BUILDING_BEAN_ID,mlist.get(position).getId());
+            startActivity(intent);
         }
 
         @Override

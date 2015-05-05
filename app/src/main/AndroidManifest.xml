@@ -76,6 +76,7 @@
         </activity>
         <activity
             android:name=".activity.BodyBuildingSettingActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
             android:label="@string/title_activity_body_building_setting"
             android:parentActivityName=".BaseActivity" >
             <meta-data
@@ -84,6 +85,7 @@
         </activity>
         <activity
             android:name=".activity.BodyBuildingSettingDetailActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
             android:label="@string/title_activity_body_building_setting_detail"
             android:parentActivityName=".BaseActivity" >
             <meta-data

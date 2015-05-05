@@ -78,7 +78,17 @@
         <activity
             android:name="com.mmrx.health.activity.BodyBuildingSettingActivity"
             android:label="@string/title_activity_body_building_setting"
-            android:parentActivityName="com.mmrx.health.BaseActivity" >
+            android:parentActivityName="com.mmrx.health.BaseActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mmrx.health.BaseActivity" />
+        </activity>
+        <activity
+            android:name="com.mmrx.health.activity.BodyBuildingSettingDetailActivity"
+            android:label="@string/title_activity_body_building_setting_detail"
+            android:parentActivityName="com.mmrx.health.BaseActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mmrx.health.BaseActivity" />

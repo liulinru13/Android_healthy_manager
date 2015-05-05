@@ -92,9 +92,14 @@ public class BuildingAdapter extends BaseAdapter{
         String checkNum = mContext.getResources().getString(R.string.body_check_str)
                 +bbb.getCheckNum()+mContext.getResources().getString(R.string.body_day_str);
         holder.checkNumText.setText(checkNum);
+
+        TextPaint tp_isCheck = holder.isCheckText.getPaint();
+        tp_isCheck.setFakeBoldText(true);
         if(bbb.ismIsCheck()){
+            holder.isCheckText.setTextColor(mContext.getResources().getColor(R.color.red));
             holder.isCheckText.setText(mContext.getResources().getString(R.string.body_check_state_true));
         }else{
+            holder.isCheckText.setTextColor(mContext.getResources().getColor(R.color.gray));
             holder.isCheckText.setText(mContext.getResources().getString(R.string.body_check_state_false));
         }
         final TextView isCheckText_final = holder.isCheckText;
@@ -121,11 +126,11 @@ public class BuildingAdapter extends BaseAdapter{
         holder.deleteTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Mood mood_temp = list.remove(position);
+                BodyBuildingBean plan_temp = mList.remove(position);
                 DbUtils dbUtils = DbUtils.create(mContext);
-                L.i("MoodAdapter-deletebn");
+                L.i("BuildingAdapter-deletebn");
                 try{
-                    dbUtils.deleteById(BodyBuildingBean.class,bbb.getId());
+                    dbUtils.deleteById(BodyBuildingBean.class,plan_temp.getId());
                 }catch (com.lidroid.xutils.exception.DbException dbe){
                     dbe.printStackTrace();
                 }

@@ -44,7 +44,7 @@
     </RelativeLayout>
 
     <com.fortysevendeg.swipelistview.SwipeListView
-        style="@style/ActivityMarginStyle"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:id="@+id/build_swipe_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -12,4 +12,6 @@ public class Constant {
     public static final String FRAGMENT_TAG_BUILD = "toBuild";
 
     public static final String BODY_BUILDING_BEAN_ID = "bodyBuildingBeanId";
+
+    public static final int MESSAGE_UPDATE_BODY_FRAGMENT = 0x123456;
 }

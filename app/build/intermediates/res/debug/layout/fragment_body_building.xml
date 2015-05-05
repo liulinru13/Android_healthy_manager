@@ -1,56 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:metro="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    style="@style/ActivityMarginStyle">
 
     <LinearLayout
-        android:id="@+id/layout"
+        android:id="@+id/fragment_body_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="200dp"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/test"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="拆"
+            android:textSize="100dp"
+            android:gravity="center"/>
     </LinearLayout>
+    <ScrollView
+        android:layout_below="@id/fragment_body_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <!--
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:padding="5dp"
-    android:weightSum="3"
-    >
-    <mmrx.com.metrolayout.MetroView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        metro:metroTitle="滑雪"
-        metro:metroDetail="2332ee"
-        metro:metroStyle="vertical_icon_text"
-        metro:metroIconRef="@drawable/icon_run150"
+        <LinearLayout
+            android:id="@+id/body_building_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        android:layout_weight="1"/>
+            </LinearLayout>
+    </ScrollView>
 
-    <mmrx.com.metrolayout.MetroView
-        android:layout_marginLeft="5dp"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        metro:metroTitle="健身"
-        metro:metroDetail="2332e"
-        metro:metroStyle="horizontal_icon_text"
-        metro:metroBackground="#ff884bff"
-        android:layout_weight="1"/>
-
-    <mmrx.com.metrolayout.MetroView
-        android:layout_marginLeft="5dp"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        metro:metroTitle="游泳"
-        metro:metroDetail="2332e"
-        metro:metroIconRef="@drawable/icon_swim150"
-        metro:metroBackground="#ff884bff"
-        android:layout_weight="1"/>
-
-    </LinearLayout>
-    -->
 
 </RelativeLayout><!-- From: file:/G:/GitHub/Android_manager/app/src/main/res/layout/fragment_body_building.xml -->

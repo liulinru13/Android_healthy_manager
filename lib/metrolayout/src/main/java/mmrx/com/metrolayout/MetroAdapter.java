@@ -108,6 +108,10 @@ public class MetroAdapter {
         for(MetroView mv:this.mvList)
             mv.invalidate();
     }
+    public void postInvalidateMv(){
+        for(MetroView mv:this.mvList)
+            mv.postInvalidate();
+    }
 
     private LinearLayout getNewLinear(){
         LinearLayout linear = new LinearLayout(this.mContext);

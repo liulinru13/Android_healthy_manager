@@ -325,4 +325,25 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
 			}
 		});
 	}
+
+//    //将软键盘关掉
+//    @Override
+//    public boolean dispatchTouchEvent(MotionEvent ev) {
+//
+//        if (ev.getAction() == MotionEvent.ACTION_DOWN) {
+//            View v = getCurrentFocus();
+//            // 关闭软键盘
+//            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+//            // 得到InputMethodManager的实例
+//            if (imm.isActive())
+//            {
+//                // 如果开启
+//                imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY,
+//                        InputMethodManager.HIDE_NOT_ALWAYS);
+//                // 关闭软键盘，开启方法相同，这个方法是切换开启与关闭状态的
+////                imm.hideSoftInputFromWindow(et_content.getWindowToken(),0);
+//            }
+//        }
+//        return super.dispatchTouchEvent(ev);
+//    }
 }

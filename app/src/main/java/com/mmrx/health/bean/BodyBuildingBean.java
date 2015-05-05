@@ -2,6 +2,8 @@ package com.mmrx.health.bean;
 
 import android.view.View;
 
+import com.lidroid.xutils.db.annotation.Id;
+import com.lidroid.xutils.db.annotation.Table;
 import com.mmrx.health.util.L;
 
 import mmrx.com.metrolayout.AbsMetroNode;
@@ -10,7 +12,9 @@ import mmrx.com.metrolayout.MetroConstant;
 /**
  * Created by mmrx on 2015/5/3.
  */
+@Table(name="body_building")
 public class BodyBuildingBean extends AbsMetroNode {
+    @Id
     private int id;
     private int checkNum;
 

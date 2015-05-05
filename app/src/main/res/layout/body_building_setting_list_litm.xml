@@ -48,6 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="健身计划的名字"
+                android:textColor="@color/black"
                 android:maxEms="10"
                 android:maxLines="1"
                 android:textSize="@dimen/text_size_media"
@@ -72,8 +73,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:text="@string/body_check_str"
             android:textSize="@dimen/text_size_media"
+            android:textColor="@color/black"
             android:layout_centerInParent="true"
             android:layout_toRightOf="@id/body_title_detail_layout"
             android:layout_marginLeft="@dimen/element_vertical_margin"/>
@@ -86,6 +89,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:text="@string/body_check_state_true"
+
             android:textSize="@dimen/text_size_media"/>
     </RelativeLayout>
 

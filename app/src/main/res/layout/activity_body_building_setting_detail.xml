@@ -80,6 +80,7 @@
                 android:id="@+id/body_plan_type_spinner"
                 android:layout_width="wrap_content"
                 android:entries="@array/body_detail_plan_type_arr"
+                android:prompt="@string/body_detail_plan_type_prompt"
                 style="@style/RowStyle_media"/>
         </LinearLayout>
 
@@ -98,6 +99,7 @@
                 android:id="@+id/body_card_type_spinner"
                 android:layout_width="wrap_content"
                 android:entries="@array/body_detail_card_type_arr"
+                android:prompt="@string/body_detail_card_type_prompt"
                 style="@style/RowStyle_media"/>
         </LinearLayout>
 
@@ -177,19 +179,19 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center_vertical">
                 <RadioButton
                     android:id="@+id/body_check_yes"
                     android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:checked="true"
                     android:text="@string/body_detail_is_check_yse"/>
                 <RadioButton
                     android:id="@+id/body_check_no"
                     android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/body_detail_is_check_no"/>
+                    android:layout_width="wrap_content"
+                    android:text="@string/body_detail_is_check_no"
+                    android:layout_marginLeft="@dimen/element_horizontal_margin"/>
 
             </RadioGroup>
 

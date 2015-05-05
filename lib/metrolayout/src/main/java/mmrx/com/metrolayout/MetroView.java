@@ -263,11 +263,13 @@ public class MetroView extends View {
                 amn.getmTitleSize(), getResources().getDisplayMetrics());
         this.mDetailTextSize = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
                 amn.getmDetailSize(), getResources().getDisplayMetrics());
-        this.mBackgroundColor = getResources().getColor(amn.getmColor());
+        this.mBackgroundColor = amn.getmColor();
         this.mIsCheck = amn.ismIsCheck();
         mCheckIcon = BitmapFactory.decodeResource(getResources(),MetroConstant.DEFAULT_CHECK_ICON);
         initRect();
-        invalidate();
+        postInvalidate();
+//        invalidate();
     }
+
 
 }

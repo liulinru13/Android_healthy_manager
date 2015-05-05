@@ -2,6 +2,19 @@
 <resources>
     <!-- From: file:/G:/GitHub/Android_manager/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string-array name="body_detail_card_type_arr">
+        <item>水平</item>
+        <item>竖直</item>
+        <item>图标</item>
+    </string-array>
+    <string-array name="body_detail_plan_type_arr">
+        <item>篮球</item>
+        <item>骑行</item>
+        <item>足球</item>
+        <item>跑步</item>
+        <item>游泳</item>
+        <item>其他</item>
+    </string-array>
     <string-array name="home_state_arr">
         <item>微胖</item>
     </string-array>
@@ -90,6 +103,7 @@
     <color name="gray_default">#ffd7d6d6</color>
     <color name="gray_press">#b7b6b6</color>
     <color name="red">#e64c4e</color>
+    <color name="red_pressed">#ffe61702</color>
     <color name="tran">#00000000</color>
     <color name="white">#fff</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr format="dimension" name="itemPadding"/></declare-styleable>
@@ -133,6 +147,8 @@
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="body_build_detail_row_height">70dp</dimen>
+    <dimen name="body_build_detail_row_media_height">50dp</dimen>
     <dimen name="bottom_bar_height">60dp</dimen>
     <!-- From: file:/G:/GitHub/Android_manager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
     <eat-comment/>
@@ -182,6 +198,20 @@
     <string name="body_check_state_true">列入计划</string>
     <string name="body_check_str">已打卡</string>
     <string name="body_day_str">天</string>
+    <string name="body_detail_card_color">卡片颜色：</string>
+    <string name="body_detail_card_type">卡片样式：</string>
+    <string name="body_detail_card_type_prompt">请选择卡片样式</string>
+    <string name="body_detail_detail">详细内容：</string>
+    <string name="body_detail_detail_hint">十个汉字以内</string>
+    <string name="body_detail_is_check">是否打卡：</string>
+    <string name="body_detail_is_check_no">否</string>
+    <string name="body_detail_is_check_yse">是</string>
+    <string name="body_detail_plan_type">运动类型：</string>
+    <string name="body_detail_plan_type_prompt">请选择运动类型</string>
+    <string name="body_detail_quit">取消保存</string>
+    <string name="body_detail_save">保存计划</string>
+    <string name="body_detail_title">计划名称：</string>
+    <string name="body_detail_title_hint">五个汉字以内</string>
     <string name="body_title">健身计划</string>
     <string name="bottom_bar_bui_str">健身</string>
     <string name="bottom_bar_eat_str">饮食</string>
@@ -236,6 +266,8 @@
     <string name="title_activity_alert">AlertActivity</string>
     <string name="title_activity_base">BaseActivity</string>
     <string name="title_activity_body_building_setting">BodyBuildingSettingActivity</string>
+    <string name="title_activity_body_building_setting_detail">BodyBuildingSettingDetailActivity
+    </string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_log">LogActivity</string>
     <string name="title_activity_manage">ManageActivity</string>
@@ -274,6 +306,15 @@
         <item name="android:textSize">@dimen/text_size_media</item>
         <item name="android:textColor">@color/black</item>
 
+    </style>
+    <style name="RowStyle_large" parent="FormTextTitleSytle">
+        <item name="android:layout_height">@dimen/body_build_detail_row_height</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="RowStyle_media" parent="FormTextTitleSytle">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:layout_height">@dimen/body_build_detail_row_media_height</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
     <style name="TabItemStyle">
 

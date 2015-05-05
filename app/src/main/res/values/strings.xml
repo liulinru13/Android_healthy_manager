@@ -99,7 +99,9 @@
     <string name="body_detail_detail">详细内容：</string>
     <string name="body_detail_detail_hint">十个汉字以内</string>
     <string name="body_detail_plan_type">运动类型：</string>
+    <string name="body_detail_plan_type_prompt">请选择运动类型</string>
     <string name="body_detail_card_type">卡片样式：</string>
+    <string name="body_detail_card_type_prompt">请选择卡片样式</string>
     <string name="body_detail_card_color">卡片颜色：</string>
     <string name="body_detail_is_check">是否打卡：</string>
     <string name="body_detail_is_check_yse">是</string>

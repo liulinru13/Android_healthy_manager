@@ -2,46 +2,46 @@
 <items version="2" >
 
     <item
-        jar="G:\AndroidStudioProjects\Android_manager\app\build\intermediates\exploded-aar\Android_manager.lib\metrolayout\unspecified\classes.jar"
+        jar="G:\GitHub\Android_manager\app\build\intermediates\exploded-aar\Android_manager.lib\swipelistview\unspecified\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="1f23d45085978ee4aa4134f9e1ffb5a3f81a3420">
-        <dex dex="G:\AndroidStudioProjects\Android_manager\app\build\intermediates\pre-dexed\debug\classes-ec09d7dcbcb0be1627099770647601fa3e98676e.jar" />
+        sha1="3d83a2c509d4bc591c8e3b30bf8a87142b317256">
+        <dex dex="G:\GitHub\Android_manager\app\build\intermediates\pre-dexed\debug\classes-e34427cfddc3ae98cccfb5816c49003380b3c19d.jar" />
     </item>
     <item
-        jar="G:\AndroidStudioProjects\Android_manager\app\build\intermediates\exploded-aar\Android_manager.lib\swipelistview\unspecified\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="342653c4db71c3f09fcb513ba9bf6ebee007657d">
-        <dex dex="G:\AndroidStudioProjects\Android_manager\app\build\intermediates\pre-dexed\debug\classes-b274351632c8b526f3ca71f019c38c3096db5c0c.jar" />
-    </item>
-    <item
-        jar="G:\AndroidStudioProjects\Android_manager\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
+        jar="G:\GitHub\Android_manager\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
-        <dex dex="G:\AndroidStudioProjects\Android_manager\app\build\intermediates\pre-dexed\debug\classes-e2b1883fa47ba3ad233ae43ed399368b0b08cbb1.jar" />
+        <dex dex="G:\GitHub\Android_manager\app\build\intermediates\pre-dexed\debug\classes-e166fb48343171c6534b668e7172fb9205f0e639.jar" />
+    </item>
+    <item
+        jar="G:\GitHub\Android_manager\app\libs\xUtils-2.6.14.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f10c51f3e0732fdeefe6e104279a58e275879b6c">
+        <dex dex="G:\GitHub\Android_manager\app\build\intermediates\pre-dexed\debug\xUtils-2.6.14-4d6e4c577edf90aa32fa19ff8b007237c5251cba.jar" />
     </item>
     <item
         jar="E:\Android\sdk\android-sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="G:\AndroidStudioProjects\Android_manager\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-885bcd908707996ba885ebe0cc36f9e2815c0f11.jar" />
+        <dex dex="G:\GitHub\Android_manager\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-885bcd908707996ba885ebe0cc36f9e2815c0f11.jar" />
     </item>
     <item
-        jar="G:\AndroidStudioProjects\Android_manager\app\libs\xUtils-2.6.14.jar"
+        jar="G:\GitHub\Android_manager\app\build\intermediates\exploded-aar\Android_manager.lib\metrolayout\unspecified\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="f10c51f3e0732fdeefe6e104279a58e275879b6c">
-        <dex dex="G:\AndroidStudioProjects\Android_manager\app\build\intermediates\pre-dexed\debug\xUtils-2.6.14-09d4a908a2fe2deddd3a385925b42b1e98fe9f56.jar" />
+        sha1="6a5dfe99290c6dfd331cfc026e91e4da1ad9e48e">
+        <dex dex="G:\GitHub\Android_manager\app\build\intermediates\pre-dexed\debug\classes-5682295e3c85ae31fa26d2a807be604108ee08e2.jar" />
     </item>
     <item
         jar="C:\Users\mmrx\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="G:\AndroidStudioProjects\Android_manager\app\build\intermediates\pre-dexed\debug\library-2.4.0-16e54a4a3ad0c6f01775be31e57822507d71cabd.jar" />
+        <dex dex="G:\GitHub\Android_manager\app\build\intermediates\pre-dexed\debug\library-2.4.0-16e54a4a3ad0c6f01775be31e57822507d71cabd.jar" />
     </item>
 
 </items>
