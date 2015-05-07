@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.fortysevendeg.swipelistview.BaseSwipeListViewListener;
 import com.fortysevendeg.swipelistview.SwipeListView;
@@ -31,7 +32,7 @@ public class BodyBuildingSettingActivity extends BaseActivity implements View.On
     DbUtils dbUtils;
     List<BodyBuildingBean> mlist;
 
-    String mFragmentTag;
+//    String mFragmentTag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,7 @@ public class BodyBuildingSettingActivity extends BaseActivity implements View.On
         mBackBut.setOnClickListener(this);
         mAddBut.setOnClickListener(this);
 
-        mFragmentTag = getIntent().getStringExtra(Constant.FRAGMENT_TAG);
+//        mFragmentTag = getIntent().getStringExtra(Constant.FRAGMENT_TAG);
 
         try {
             mlist = dbUtils.findAll(BodyBuildingBean.class);
@@ -83,14 +84,18 @@ public class BodyBuildingSettingActivity extends BaseActivity implements View.On
         switch (v.getId()){
             case R.id.title_bar_back:
                 intent.setClass(this,ManageActivity.class);
-                intent.putExtra(Constant.FRAGMENT_TAG,mFragmentTag);
+                intent.putExtra(Constant.FRAGMENT_TAG,Constant.FRAGMENT_TAG_BUILD);
                 startActivity(intent);
                 break;
             case R.id.title_bar_add:
-                intent.setClass(this,BodyBuildingSettingDetailActivity.class);
-//                -1表示新建
-                intent.putExtra(Constant.BODY_BUILDING_BEAN_ID,-1);
-                startActivity(intent);
+                if(mlist.size()<7){
+                    intent.setClass(this,BodyBuildingSettingDetailActivity.class);
+    //                -1表示新建
+                    intent.putExtra(Constant.BODY_BUILDING_BEAN_ID,-1);
+                    startActivity(intent);
+                }
+                else
+                    Toast.makeText(this, "健身计划超出最大数量(7项),请删除原有计划后再添加.", Toast.LENGTH_LONG);
                 break;
             default:
                 break;

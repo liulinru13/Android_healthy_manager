@@ -3,6 +3,7 @@ package com.mmrx.health.activity;
 
 import android.app.Dialog;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
@@ -40,6 +41,8 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
     LinearLayout mBottomBn_med;
     LinearLayout mBottomBn_bui;
 
+    FragmentManager mFragmentManager;
+
 	//title bar 相关设置
     ImageButton mBackBut;
     TextView mTitleTv;
@@ -54,13 +57,14 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_manage);
 		initView();
-		drugFragment = new DrugFragment();
-		eatFragment = new EatFragment();
-		sleepFrament = new SleepFrament();
-        buildFrament = new BodyBuildingFragment();
-		fragments=new Fragment[]{eatFragment,sleepFrament,drugFragment,buildFrament};
-		FragmentTransaction beginTransaction = getFragmentManager().beginTransaction();
-		beginTransaction.add(R.id.id_content, eatFragment).show(eatFragment).commit();
+//		drugFragment = new DrugFragment();
+//		eatFragment = new EatFragment();
+//		sleepFrament = new SleepFrament();
+//        buildFrament = new BodyBuildingFragment();
+//		fragments=new Fragment[]{eatFragment,sleepFrament,drugFragment,buildFrament};
+//		FragmentTransaction beginTransaction = getFragmentManager().beginTransaction();
+//		beginTransaction.add(R.id.id_content, eatFragment).show(eatFragment).commit();
+        setTabSelection(0);
 	}
 
 	private void initView() {
@@ -80,6 +84,7 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
 		but_more.setOnClickListener(this);
 		tabs[index].setSelected(true);
 
+        mFragmentManager = getFragmentManager();
 
         mBottomBn_eat = (LinearLayout)findViewById(R.id.bottom_bar_eat);
         mBottomBn_sle = (LinearLayout)findViewById(R.id.bottom_bar_sle);
@@ -139,56 +144,75 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
 	}
 
     private void setTabSelection(int index) {
+        //开启一个事务
+        FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+        resetBottomBar();
+        hideAllFragment(fragmentTransaction);
         switch (index) {
             case 0:
-                resetBottomBar();
+
                 //设置bottom bar按钮的状态
                 ((Button)mBottomBn_eat.findViewById(R.id.bottom_bar_eat_bn))
                         .setBackgroundColor(getResources().getColor(R.color.bottom_bar_pressed));
                 ((Button)mBottomBn_eat.findViewById(R.id.bottom_bar_eat_bn))
                         .setTextColor(getResources().getColor(R.color.bottom_bar_text_pressed));
+                if(eatFragment == null){
+                    eatFragment = new EatFragment();
+                    fragmentTransaction.add(R.id.id_content,eatFragment);
+                }else{
+                    fragmentTransaction.show(eatFragment);
+                }
                 break;
             case 1:
-                resetBottomBar();
+
                 //设置bottom bar按钮的状态
                 ((Button)mBottomBn_sle.findViewById(R.id.bottom_bar_sle_bn))
                         .setBackgroundColor(getResources().getColor(R.color.bottom_bar_pressed));
                 ((Button)mBottomBn_sle.findViewById(R.id.bottom_bar_sle_bn))
                         .setTextColor(getResources().getColor(R.color.bottom_bar_text_pressed));
+                if(sleepFrament == null){
+                    sleepFrament = new SleepFrament();
+                    fragmentTransaction.add(R.id.id_content,sleepFrament);
+                }else{
+                    fragmentTransaction.show(sleepFrament);
+                }
                 break;
             case 2:
-                resetBottomBar();
+
                 //设置bottom bar按钮的状态
                 ((Button)mBottomBn_med.findViewById(R.id.bottom_bar_med_bn))
                         .setBackgroundColor(getResources().getColor(R.color.bottom_bar_pressed));
                 ((Button)mBottomBn_med.findViewById(R.id.bottom_bar_med_bn))
                         .setTextColor(getResources().getColor(R.color.bottom_bar_text_pressed));
+                if(drugFragment == null){
+                    drugFragment = new DrugFragment();
+                    fragmentTransaction.add(R.id.id_content,drugFragment);
+                }else{
+                    fragmentTransaction.show(drugFragment);
+                }
                 break;
             case 3:
-                resetBottomBar();
+
                 //设置bottom bar按钮的状态
                 ((Button)mBottomBn_bui.findViewById(R.id.bottom_bar_bui_bn))
                         .setBackgroundColor(getResources().getColor(R.color.bottom_bar_pressed));
                 ((Button)mBottomBn_bui.findViewById(R.id.bottom_bar_bui_bn))
                         .setTextColor(getResources().getColor(R.color.bottom_bar_text_pressed));
+                if(buildFrament == null){
+                    buildFrament = new BodyBuildingFragment();
+                    fragmentTransaction.add(R.id.id_content,buildFrament);
+                }else{
+                    fragmentTransaction.show(buildFrament);
+                }
                 break;
             default:
                 break;
         }
+        fragmentTransaction.commit();
 
-        if (currentTabsIndex!=index) {
-            FragmentTransaction trx = getFragmentManager().beginTransaction();
-            hideAllFragment(trx);
-//            trx.hide(fragments[currentTabsIndex]);
-            if (!fragments[index].isAdded()) {
-                trx.add(R.id.id_content, fragments[index]);
-            }
-            trx.show(fragments[index]).commit();
-            tabs[currentTabsIndex].setSelected(false);
-            tabs[index].setSelected(true);
-            currentTabsIndex=index;
-        }
     }
+
+
 
     //将bottom bar的按钮状态都清除了
     private void resetBottomBar(){

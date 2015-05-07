@@ -20,6 +20,8 @@ public class SPutil {
 	private static final String ISALARM = "isalarm";
     private static final String ACC_ICON_PATH = "account_icon_path";
     private static final String LOGIN = "login";
+    //健身计划fragment是否需要需要更新
+    private static final String BUILD_NEED_UPDATE = "buildNeedUpdate";
 
     private Context mContext;
 	SharedPreferences preferences;
@@ -32,6 +34,14 @@ public class SPutil {
 
 		}
 	}
+
+    public void WriteBuildUpdate(boolean isUpdate) {
+        preferences.edit().putBoolean(BUILD_NEED_UPDATE, isUpdate).commit();
+    }
+
+    public boolean ReadBuildUpdate() {
+        return preferences.getBoolean(BUILD_NEED_UPDATE, true);
+    }
 
     public void WriteLogin(boolean isLogin) {
         preferences.edit().putBoolean(LOGIN, isLogin).commit();

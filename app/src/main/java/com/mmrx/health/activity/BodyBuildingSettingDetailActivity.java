@@ -27,6 +27,7 @@ import com.mmrx.health.R;
 import com.mmrx.health.bean.BodyBuildingBean;
 import com.mmrx.health.util.Constant;
 import com.mmrx.health.util.L;
+import com.mmrx.health.util.SPutil;
 
 import mmrx.com.metrolayout.MetroConstant;
 
@@ -229,7 +230,8 @@ public class BodyBuildingSettingDetailActivity extends BaseActivity {
                 e.printStackTrace();
             }
         }
-
+        SPutil sp = new SPutil(this);
+        sp.WriteBuildUpdate(true);
         //返回
         returnActivity();
     }

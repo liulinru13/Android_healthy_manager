@@ -10,7 +10,6 @@ import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lidroid.xutils.DbUtils;
@@ -19,12 +18,14 @@ import com.mmrx.health.R;
 import com.mmrx.health.activity.BodyBuildingSettingActivity;
 import com.mmrx.health.bean.BodyBuildingBean;
 import com.mmrx.health.util.Constant;
+import com.mmrx.health.util.L;
+import com.mmrx.health.util.SPutil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import mmrx.com.metrolayout.AbsMetroNode;
-import mmrx.com.metrolayout.MetroAdapter;
+import mmrx.com.metrolayout.MetroView;
 
 
 /**
@@ -33,11 +34,18 @@ import mmrx.com.metrolayout.MetroAdapter;
 public class BodyBuildingFragment extends Fragment {
 
     View mInflater;
-    LinearLayout mLinearLayout;
+//    LinearLayout mLinearLayout;
     List<AbsMetroNode> mlist;
-    MetroAdapter mMetroAdapter;
+//    MetroAdapter mMetroAdapter;
     DbUtils mDb;
     TextView adf;
+
+    MetroView[] metroArr = new MetroView[7];
+    final int mertoViewID[] = new int[]{R.id.body_metor_1_1,R.id.body_metor_1_2,R.id.body_metor_2_1,
+            R.id.body_metor_2_2,R.id.body_metor_2_3,R.id.body_metor_3_1,R.id.body_metor_3_2,
+            };
+    //应该显示的metro的数量，应该小于等于7
+    int metroViewShowNum;
     //刷新线程
     ReflashMetroLayoutThread mInitThread;
 
@@ -45,35 +53,38 @@ public class BodyBuildingFragment extends Fragment {
         @SuppressLint("NewApi")
         public void handleMessage(android.os.Message msg) {
             if(msg.what == Constant.MESSAGE_UPDATE_BODY_FRAGMENT){
-                for(LinearLayout ll:mMetroAdapter.getLayoutList()){
-                    mLinearLayout.addView(ll);
+                //隐藏所有控件
+                hideAllMetroViews();
+                for(int i=0;i<metroViewShowNum&&i<7;i++){
+                    metroArr[i].setVisibility(View.VISIBLE);
+                    metroArr[i].invalidate();
+                }
                 }
             }
 
         };
-    };
 
     public BodyBuildingFragment() {
         // Required empty public constructor
     }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         mInflater = inflater.inflate(R.layout.fragment_body_building, container, false);
-//        Intent intent = new Intent(this.getActivity(), AlarmActivity.class);
-//        startActivity(intent);
+        L.i("BodyBuildingFragment---onCreateView");
         init();
         return mInflater;
     }
     private void init(){
-        mLinearLayout = (LinearLayout)mInflater.findViewById(R.id.body_building_linearlayout);
         mDb = DbUtils.create(getActivity());
         mlist = new ArrayList<AbsMetroNode>();
-        mMetroAdapter = new MetroAdapter(mlist,getActivity());
-
+        SPutil sp = new SPutil(BodyBuildingFragment.this.getActivity());
+        sp.WriteBuildUpdate(true);
+        //填充metro数组
+        for(int i=0;i<7;i++){
+            metroArr[i] = (MetroView)mInflater.findViewById(mertoViewID[i]);
+        }
         /**
          * 测试按钮
          * */
@@ -92,7 +103,9 @@ public class BodyBuildingFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        SPutil sp = new SPutil(getActivity());
         mInitThread = new ReflashMetroLayoutThread();
+        mInitThread.setNeedReflash(sp.ReadBuildUpdate());
         mInitThread.start();
     }
 
@@ -102,6 +115,23 @@ public class BodyBuildingFragment extends Fragment {
         //打断线程
         if(mInitThread.isAlive())
             mInitThread.interrupt();
+    }
+    /**
+     * 隐藏所有的metro控件
+     * */
+    private void hideAllMetroViews(){
+        for(MetroView m: metroArr){
+            if(m !=null)
+                m.setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        L.i("BodyBuildingFragment----onStop");
+//        SPutil sp = new SPutil(BodyBuildingFragment.this.getActivity());
+//        sp.WriteBuildUpdate(true);
     }
 
     private class ReflashMetroLayoutThread extends Thread{
@@ -113,16 +143,18 @@ public class BodyBuildingFragment extends Fragment {
         @Override
         public void run() {
             if(needReflash) {
-                ArrayList<AbsMetroNode> list_temp = new ArrayList<AbsMetroNode>();
-//            DbUtils mDb_temp = DbUtils.create(BodyBuildingFragment.this.getActivity());
                 try {
                     List<BodyBuildingBean> listFromDb = mDb.findAll(BodyBuildingBean.class);
-                    if (listFromDb != null) {
-                        for (BodyBuildingBean bbb : listFromDb) {
-                            list_temp.add(bbb);
+                    if (listFromDb != null ) {
+
+                        if(listFromDb.size()>7)
+                            L.e("健身计划数量大于7个...");
+                        //将bean中的数据填充到数组里面去
+                        metroViewShowNum = 0;
+                        for(int i=0;i<listFromDb.size() && i<7;i++){
+                            metroArr[i].setAttribute(listFromDb.get(i));
+                            metroViewShowNum++;
                         }
-                        mMetroAdapter.setNodeList(list_temp);
-//            mMetroAdapter.postInvalidateMv();
                         //通知刷新
                         Message message = new Message();
                         message.what = Constant.MESSAGE_UPDATE_BODY_FRAGMENT;
@@ -134,6 +166,8 @@ public class BodyBuildingFragment extends Fragment {
                     e.printStackTrace();
                 }
                 this.needReflash = false;
+                SPutil sp = new SPutil(BodyBuildingFragment.this.getActivity());
+                sp.WriteBuildUpdate(this.needReflash);
             }
         }//end run
 

@@ -1037,6 +1037,13 @@
         <item name="android:textSize">@dimen/text_size_small</item>
         <item name="android:layout_height">@dimen/body_build_detail_row_media_height</item>
         <item name="android:gravity">center_vertical</item>
+    </style><style name="MetroLayoutStyle">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:layout_height">110dp</item>
+        <item name="android:layout_width">match_parent</item>
     </style><style name="TabItemStyle">
 
         <item name="android:background">#7fffffff</item>
