@@ -3,7 +3,6 @@ package mmrx.com.metrolayout;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -71,10 +70,11 @@ public class MetroView extends View {
                         MetroConstant.DEFAULT_DETAIL_SIZE, getResources().getDisplayMetrics()));
 
         //icon
-        mIcon = BitmapFactory.decodeResource(context.getResources(),ta.getResourceId(
-                R.styleable.metroView_metroIconRef,MetroConstant.DEFAULT_ICON));
-        mCheckIcon = BitmapFactory.decodeResource(context.getResources(),ta.getResourceId(
-                R.styleable.metroView_metroIsCheckIcon,MetroConstant.DEFAULT_CHECK_ICON));
+        int iconId = ta.getResourceId(R.styleable.metroView_metroIconRef,MetroConstant.DEFAULT_ICON);
+        mIcon = BitmapCache.getInstance().getBitmap(iconId,context);
+        int checkId = ta.getResourceId(R.styleable.metroView_metroIsCheckIcon,MetroConstant.DEFAULT_CHECK_ICON);
+        mCheckIcon = BitmapCache.getInstance().getBitmap(checkId,context);
+
         mDetail = "";
         mTitle = "";
         for(int i=0;i<num;i++){
@@ -244,10 +244,12 @@ public class MetroView extends View {
         invalidate();
     }
 
-    public void setAttribute(AbsMetroNode amn){
+    public void setAttribute(AbsMetroNode amn,Context context){
         this.mTitle = amn.getmTitle();
         this.mDetail = amn.getmDetail();
-        this.mIcon = BitmapFactory.decodeResource(getResources(),amn.getmIcon());
+
+        this.mIcon = BitmapCache.getInstance().getBitmap(amn.getmIcon(),context);
+
         final MetroConstant.MetroStyle style = amn.getmStyle();
         switch (style){
             case HORIZONTAL:
@@ -265,7 +267,7 @@ public class MetroView extends View {
                 amn.getmDetailSize(), getResources().getDisplayMetrics());
         this.mBackgroundColor = amn.getmColor();
         this.mIsCheck = amn.ismIsCheck();
-        mCheckIcon = BitmapFactory.decodeResource(getResources(),MetroConstant.DEFAULT_CHECK_ICON);
+        mCheckIcon = BitmapCache.getInstance().getBitmap(MetroConstant.DEFAULT_CHECK_ICON,context);
         initRect();
         postInvalidate();
 //        invalidate();

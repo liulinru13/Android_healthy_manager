@@ -152,7 +152,7 @@ public class BodyBuildingFragment extends Fragment {
                         //将bean中的数据填充到数组里面去
                         metroViewShowNum = 0;
                         for(int i=0;i<listFromDb.size() && i<7;i++){
-                            metroArr[i].setAttribute(listFromDb.get(i));
+                            metroArr[i].setAttribute(listFromDb.get(i),BodyBuildingFragment.this.getActivity());
                             metroViewShowNum++;
                         }
                         //通知刷新

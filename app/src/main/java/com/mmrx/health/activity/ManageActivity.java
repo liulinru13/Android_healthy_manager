@@ -2,7 +2,6 @@
 package com.mmrx.health.activity;
 
 import android.app.Dialog;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
@@ -33,7 +32,7 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
 	EatFragment eatFragment;
 	SleepFrament sleepFrament;
     BodyBuildingFragment buildFrament;
-	Fragment[] fragments;
+//	Fragment[] fragments;
 
     //底部的四个按钮
     LinearLayout mBottomBn_eat;

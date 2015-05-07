@@ -120,8 +120,8 @@
                 android:id="@+id/body_card_color_puple"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#ff831bd2"
-                android:tag="#ff831bd2"
+                android:background="#831bd2"
+                android:tag="#831bd2"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/element_horizontal_margin"/>
 
@@ -129,8 +129,8 @@
                 android:id="@+id/body_card_color_blue"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#ff1faeff"
-                android:tag="#ff1faeff"
+                android:background="#1faeff"
+                android:tag="#1faeff"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/element_horizontal_margin"/>
 
@@ -138,8 +138,8 @@
                 android:id="@+id/body_card_color_blue_green"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#ff00d8cc"
-                android:tag="#ff00d8cc"
+                android:background="#00d8cc"
+                android:tag="#00d8cc"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/element_horizontal_margin"/>
 
@@ -147,8 +147,8 @@
                 android:id="@+id/body_card_color_green"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#ff91d100"
-                android:tag="#ff91d100"
+                android:background="#91d100"
+                android:tag="#91d100"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/element_horizontal_margin"/>
 
@@ -156,8 +156,8 @@
                 android:id="@+id/body_card_color_yellow"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#ffe1b700"
-                android:tag="#ffe1b700"
+                android:background="#e1b700"
+                android:tag="#e1b700"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/element_horizontal_margin"/>
         </LinearLayout>

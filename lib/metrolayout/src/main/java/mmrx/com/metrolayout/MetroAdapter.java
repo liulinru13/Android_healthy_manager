@@ -73,7 +73,7 @@ public class MetroAdapter {
             for(int i=0;i<list_temp.size();i++){
                 AbsMetroNode amn_temp = list_temp.get(i);
                 MetroView mv = new MetroView(this.mContext);
-                mv.setAttribute(amn_temp);
+                mv.setAttribute(amn_temp,mContext);
                 //设置布局属性
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT);
                 //设置左margin
