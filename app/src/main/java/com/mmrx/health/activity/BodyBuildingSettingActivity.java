@@ -88,14 +88,14 @@ public class BodyBuildingSettingActivity extends BaseActivity implements View.On
                 startActivity(intent);
                 break;
             case R.id.title_bar_add:
-                if(mlist.size()<7){
+                if(mAdapter.getList() == null || mAdapter.getList().size()<7){
                     intent.setClass(this,BodyBuildingSettingDetailActivity.class);
     //                -1表示新建
                     intent.putExtra(Constant.BODY_BUILDING_BEAN_ID,-1);
                     startActivity(intent);
                 }
                 else
-                    Toast.makeText(this, "健身计划超出最大数量(7项),请删除原有计划后再添加.", Toast.LENGTH_LONG);
+                    Toast.makeText(this, "健身计划超出最大数量(7项),请删除原有计划后再添加.", Toast.LENGTH_LONG).show();
                 break;
             default:
                 break;
@@ -116,8 +116,8 @@ public class BodyBuildingSettingActivity extends BaseActivity implements View.On
 
         @Override
         public void onDismiss(int[] reverseSortedPositions) {
+            L.i("SwipeListViewListener-onDismiss");
             for (int position : reverseSortedPositions) {
-                L.i("SwipeListViewListener-onDismiss");
                 mlist.remove(position);
             }
             mAdapter.notifyDataSetChanged();

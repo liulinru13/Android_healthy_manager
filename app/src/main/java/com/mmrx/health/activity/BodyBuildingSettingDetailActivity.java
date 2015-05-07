@@ -184,16 +184,18 @@ public class BodyBuildingSettingDetailActivity extends BaseActivity {
             }//end for
         //选择卡片样式
         String cardTypeStr = (String)mCardStyle.getSelectedItem();
-        MetroConstant.MetroStyle cardType = mcardStyle[0];
+//        L.i("BodyBuildingSettingDetailActivity--cardTypeStr is" + cardTypeStr);
+        MetroConstant.MetroStyle cardType = mcardStyle[1];
         if(cardTypeStr != null && mCardStyleArr.length<=mcardStyle.length)
             for(int i=0;i<mCardStyleArr.length;i++){
+//                L.i("BodyBuildingSettingDetailActivity--mCardStyleArr is" + mCardStyleArr[i]);
                 if(cardTypeStr.equals(mCardStyleArr[i])){
                     cardType = mcardStyle[i];
                     break;
                 }
             }//end for
-
-        //是否打卡
+//        L.i("BodyBuildingSettingDetailActivity--cardType is" + cardType);
+        //是否已经打卡
         boolean check = true;
         if(mRg.getCheckedRadioButtonId() == R.id.body_check_no)
             check = false;
@@ -201,9 +203,10 @@ public class BodyBuildingSettingDetailActivity extends BaseActivity {
 //        int weight = (int)((Math.random()+1)*2);
         int weight = 2;
         if(bbb == null) {
+//            L.i("BodyBuildingSettingDetailActivity--cardType is" + cardType);
             bbb = new BodyBuildingBean(title, detail, icon, weight, cardType,
                     MetroConstant.DEFAULT_TITLE_SIZE, MetroConstant.DEFAULT_DETAIL_SIZE,
-                    mCardColor, check);
+                    mCardColor,false);
             //存入数据库
             try {
                 mDb.save(bbb);

@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 
@@ -20,7 +21,8 @@ public class MetroView extends View {
     private String mDetail;
     private Bitmap mIcon;//图标
     private Bitmap mCheckIcon;//打卡图标
-    private boolean mIsCheck;//是否打卡
+    private boolean mIsCheck;//是否已经打卡
+    private boolean mCheckSetting;//是否要打卡
     private int mBackgroundColor;
     private int mWeight;//权重
     private int mStyle;//1 2 3 样式
@@ -58,7 +60,7 @@ public class MetroView extends View {
         int num = ta.getIndexCount();
         mIsCheck = false;
         //样式默认为 icon 文字 水平
-        mStyle = 1;
+        mStyle = 2;
         //背景色默认为红色
         mBackgroundColor = ta.getColor(R.styleable.metroView_metroBackground,
                 context.getResources().getColor(R.color.red));
@@ -68,12 +70,12 @@ public class MetroView extends View {
         mDetailTextSize = ta.getDimensionPixelSize(R.styleable.metroView_metroTitleTextSize,
                 (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
                         MetroConstant.DEFAULT_DETAIL_SIZE, getResources().getDisplayMetrics()));
-
+        mCheckSetting = true;
         //icon
         int iconId = ta.getResourceId(R.styleable.metroView_metroIconRef,MetroConstant.DEFAULT_ICON);
         mIcon = BitmapCache.getInstance().getBitmap(iconId,context);
         int checkId = ta.getResourceId(R.styleable.metroView_metroIsCheckIcon,MetroConstant.DEFAULT_CHECK_ICON);
-        mCheckIcon = BitmapCache.getInstance().getBitmap(checkId,context);
+        mCheckIcon = BitmapCache.getInstance().getBitmap(checkId, context);
 
         mDetail = "";
         mTitle = "";
@@ -84,7 +86,7 @@ public class MetroView extends View {
             else if(index == R.styleable.metroView_metroDetail)
                 mDetail = ta.getString(index);
             else if(index == R.styleable.metroView_metroStyle)
-                mStyle = ta.getInt(index, 1);
+                mStyle = ta.getInt(index, 2);
         }
 
         ta.recycle();
@@ -158,7 +160,7 @@ public class MetroView extends View {
         canvas.drawRect(0,0,getMeasuredWidth(),getMeasuredHeight(),mPaint);
 
         //check标记,画上打卡标志
-        if(mIsCheck){
+        if( mCheckSetting && mIsCheck ){
             mPaint_check.setAlpha(70);
             canvas.drawBitmap(mCheckIcon,null,mcheckRect,mPaint_check);
         }
@@ -251,6 +253,7 @@ public class MetroView extends View {
         this.mIcon = BitmapCache.getInstance().getBitmap(amn.getmIcon(),context);
 
         final MetroConstant.MetroStyle style = amn.getmStyle();
+        Log.i("MetroView--setAttribute","style is "+ style);
         switch (style){
             case HORIZONTAL:
                 this.mStyle = 1;
@@ -261,12 +264,14 @@ public class MetroView extends View {
             case ICON_ONLY:
                 this.mStyle = 3;
         }
+        Log.i("MetroView--setAttribute","mStyle is "+ this.mStyle);
         this.mTitleTextSize = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
                 amn.getmTitleSize(), getResources().getDisplayMetrics());
         this.mDetailTextSize = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
                 amn.getmDetailSize(), getResources().getDisplayMetrics());
         this.mBackgroundColor = amn.getmColor();
         this.mIsCheck = amn.ismIsCheck();
+        this.mCheckSetting = amn.ismCheckSetting();
         mCheckIcon = BitmapCache.getInstance().getBitmap(MetroConstant.DEFAULT_CHECK_ICON,context);
         initRect();
         postInvalidate();

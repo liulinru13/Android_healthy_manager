@@ -17,11 +17,15 @@ public abstract class AbsMetroNode implements View.OnClickListener{
     protected int mColor = MetroConstant.DEFAULT_COLOR;
     protected boolean mIsCheck = false;
 
+
+
+    protected boolean mCheckSetting = true;
+
     protected AbsMetroNode thisNode;
     protected MetroView thisView;
 
     public AbsMetroNode(String mTitle, String mDetail, int mIcon, int mWeight, MetroConstant.MetroStyle mStyle,
-                           int mTitleSize, int mDetailSize, int mColor, boolean mIsCheck) {
+                           int mTitleSize, int mDetailSize, int mColor, boolean mIsCheck,boolean mCheckSetting) {
         this.mTitle = mTitle;
         this.mDetail = mDetail;
         this.mIcon = mIcon;
@@ -31,6 +35,7 @@ public abstract class AbsMetroNode implements View.OnClickListener{
         this.mDetailSize = mDetailSize;
         this.mColor = mColor;
         this.mIsCheck = mIsCheck;
+        this.mCheckSetting = mCheckSetting;
     }
 
     protected AbsMetroNode() {
@@ -118,6 +123,13 @@ public abstract class AbsMetroNode implements View.OnClickListener{
     }
     public void setThisView(MetroView thisView) {
         this.thisView = thisView;
+    }
+
+    public boolean ismCheckSetting() {
+        return mCheckSetting;
+    }
+    public void setmCheckSetting(boolean mCheckSetting) {
+        this.mCheckSetting = mCheckSetting;
     }
 
 }

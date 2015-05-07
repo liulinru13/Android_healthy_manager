@@ -95,7 +95,7 @@ public class BuildingAdapter extends BaseAdapter{
 
         TextPaint tp_isCheck = holder.isCheckText.getPaint();
         tp_isCheck.setFakeBoldText(true);
-        if(bbb.ismIsCheck()){
+        if(bbb.ismCheckSetting()){
             holder.isCheckText.setTextColor(mContext.getResources().getColor(R.color.red));
             holder.isCheckText.setText(mContext.getResources().getString(R.string.body_check_state_true));
         }else{
@@ -106,12 +106,12 @@ public class BuildingAdapter extends BaseAdapter{
         holder.isCheckText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(bbb.ismIsCheck()){
+                if(bbb.ismCheckSetting()){
                     isCheckText_final.setText(mContext.getResources().getString(R.string.body_check_state_false));
-                    bbb.setmIsCheck(false);
+                    bbb.setmCheckSetting(false);
                 }else{
                     isCheckText_final.setText(mContext.getResources().getString(R.string.body_check_state_true));
-                    bbb.setmIsCheck(true);
+                    bbb.setmCheckSetting(true);
                 }
                 DbUtils dbUtils = DbUtils.create(mContext);
                 //更新

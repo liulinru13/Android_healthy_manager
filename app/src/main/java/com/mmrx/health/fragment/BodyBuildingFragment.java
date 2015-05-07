@@ -21,10 +21,8 @@ import com.mmrx.health.util.Constant;
 import com.mmrx.health.util.L;
 import com.mmrx.health.util.SPutil;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import mmrx.com.metrolayout.AbsMetroNode;
 import mmrx.com.metrolayout.MetroView;
 
 
@@ -35,7 +33,7 @@ public class BodyBuildingFragment extends Fragment {
 
     View mInflater;
 //    LinearLayout mLinearLayout;
-    List<AbsMetroNode> mlist;
+    List<BodyBuildingBean> mlist;
 //    MetroAdapter mMetroAdapter;
     DbUtils mDb;
     TextView adf;
@@ -78,12 +76,12 @@ public class BodyBuildingFragment extends Fragment {
     }
     private void init(){
         mDb = DbUtils.create(getActivity());
-        mlist = new ArrayList<AbsMetroNode>();
         SPutil sp = new SPutil(BodyBuildingFragment.this.getActivity());
         sp.WriteBuildUpdate(true);
         //填充metro数组
         for(int i=0;i<7;i++){
             metroArr[i] = (MetroView)mInflater.findViewById(mertoViewID[i]);
+
         }
         /**
          * 测试按钮
@@ -115,6 +113,7 @@ public class BodyBuildingFragment extends Fragment {
         //打断线程
         if(mInitThread.isAlive())
             mInitThread.interrupt();
+
     }
     /**
      * 隐藏所有的metro控件
@@ -132,6 +131,14 @@ public class BodyBuildingFragment extends Fragment {
         L.i("BodyBuildingFragment----onStop");
 //        SPutil sp = new SPutil(BodyBuildingFragment.this.getActivity());
 //        sp.WriteBuildUpdate(true);
+        //更新所有的metroView
+        if(mlist !=null) {
+            try {
+                mDb.updateAll(mlist);
+            }catch (DbException dbe){
+                dbe.printStackTrace();
+            }
+        }
     }
 
     private class ReflashMetroLayoutThread extends Thread{
@@ -145,14 +152,22 @@ public class BodyBuildingFragment extends Fragment {
             if(needReflash) {
                 try {
                     List<BodyBuildingBean> listFromDb = mDb.findAll(BodyBuildingBean.class);
-                    if (listFromDb != null ) {
 
+                    if (listFromDb != null ) {
+                        mlist = listFromDb;
                         if(listFromDb.size()>7)
                             L.e("健身计划数量大于7个...");
                         //将bean中的数据填充到数组里面去
                         metroViewShowNum = 0;
                         for(int i=0;i<listFromDb.size() && i<7;i++){
-                            metroArr[i].setAttribute(listFromDb.get(i),BodyBuildingFragment.this.getActivity());
+                            BodyBuildingBean temp_bean = listFromDb.get(i);
+                            L.i("ReflashMetroLayoutThread--style"+temp_bean.getmStyle());
+                            metroArr[i].setAttribute(temp_bean,BodyBuildingFragment.this.getActivity());
+                            temp_bean.setThisNode(temp_bean);
+                            temp_bean.setThisView(metroArr[i]);
+                            //判断是否需要打卡，需要打卡就给添加上点击事件
+                            if(temp_bean.ismCheckSetting())
+                                metroArr[i].setOnClickListener(listFromDb.get(i));
                             metroViewShowNum++;
                         }
                         //通知刷新

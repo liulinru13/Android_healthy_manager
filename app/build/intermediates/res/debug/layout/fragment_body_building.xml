@@ -15,7 +15,7 @@
             android:id="@+id/test"
             android:layout_width="match_parent"
             android:layout_height="144dp"
-            android:text="拆"
+            android:text="添"
             android:textSize="100dp"
             android:gravity="center"/>
     </LinearLayout>
@@ -31,7 +31,8 @@
             android:orientation="vertical">
 
             <LinearLayout
-                style="@style/MetroLayoutStyle">
+                style="@style/MetroLayoutStyle"
+                android:layout_weight="2">
 
                 <mmrx.com.metrolayout.MetroView
                     android:id="@+id/body_metor_1_1"
@@ -52,7 +53,8 @@
             </LinearLayout>
 
             <LinearLayout
-                style="@style/MetroLayoutStyle">
+                style="@style/MetroLayoutStyle"
+                android:layout_weight="3">
 
                 <mmrx.com.metrolayout.MetroView
                     android:id="@+id/body_metor_2_1"
@@ -80,7 +82,8 @@
             </LinearLayout>
 
             <LinearLayout
-                style="@style/MetroLayoutStyle">
+                style="@style/MetroLayoutStyle"
+                android:layout_weight="3">
 
                 <mmrx.com.metrolayout.MetroView
                     android:id="@+id/body_metor_3_1"
