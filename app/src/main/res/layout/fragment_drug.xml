@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_drug_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
     <TextView
         android:id="@+id/drug_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/drug_layout_default_str"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="30dp"
+        android:visibility="gone"
+         />
+
+    <com.fortysevendeg.swipelistview.SwipeListView
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:id="@+id/drug_swipe_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:text="@string/drug_layout_default_str"
-        android:gravity="center"
-        android:visibility="gone" />
-
-    <ListView
-        android:id="@+id/drug_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:listSelector="#00000000"
+        swipe:swipeActionRight="reveal"
+        swipe:swipeAnimationTime="0"
+        swipe:swipeBackView="@+id/back"
+        swipe:swipeCloseAllItemsWhenMoveList="true"
+        swipe:swipeFrontView="@+id/front"
+        swipe:swipeMode="left"
+        swipe:swipeOffsetLeft="260dp"
+        swipe:swipeOpenOnLongPress="false"/>
 
 </RelativeLayout>

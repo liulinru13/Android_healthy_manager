@@ -35,8 +35,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:maxEms="5"
-                android:maxLines="1"
+                android:maxLength="3"
                 android:hint="@string/body_detail_title_hint"
                 style="@style/RowStyle_large"/>
 
@@ -59,8 +58,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:maxEms="10"
-                android:maxLines="1"
+                android:maxLength="4"
                 android:hint="@string/body_detail_detail_hint"
                 style="@style/RowStyle_large"/>
 

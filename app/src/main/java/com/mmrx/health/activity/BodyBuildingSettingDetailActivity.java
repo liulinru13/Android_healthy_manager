@@ -167,8 +167,17 @@ public class BodyBuildingSettingDetailActivity extends BaseActivity {
     public void saveEvent(View save){
         //标题
         String title = mTitleEdit.getText().toString();
+
+//        if(!title.equals("") && !isMatch(title,5)){
+//            MyToast.showLong(this,"计划名称最多允许输入5个汉字");
+//            return;
+//        }
         //内容
         String detail = mDetailEdit.getText().toString();
+//        if(!detail.equals("") && !isMatch(detail,10)){
+//            MyToast.showLong(this,"详细内容最多允许输入8个汉字");
+//            return;
+//        }
         //运动类型
         String buildTypeStr = (String)mBuildType.getSelectedItem();
         if(buildTypeStr == null)
@@ -266,5 +275,42 @@ public class BodyBuildingSettingDetailActivity extends BaseActivity {
         }
         return super.dispatchTouchEvent(ev);
     }
+
+//    判断数据是否正确
+//    public boolean isMatch(String str,int maxNum)
+//    {
+//        String all = "";
+//        if(maxNum == 5) {
+//            //中英文开头，只允许出现中英文，下划线和数字，下划线数字不可以出现在首部4到16个字符
+//            all = "^[\\u4E00-\\u9FA5\\uF900-\\uFA2Da-zA-Z][\\u4E00-\\u9FA5\\uF900-\\uFA2D\\w]{0,5}$";
+//        }
+//        else
+//            all = "^[\\u4E00-\\u9FA5\\uF900-\\uFA2Da-zA-Z][\\u4E00-\\u9FA5\\uF900-\\uFA2D\\w]{0,10}$";
+//        Pattern pattern = Pattern.compile(all);
+//        boolean flag = pattern.matcher(str).matches();
+//        if(!flag)
+//        {
+//            return  false;
+//        }
+//
+//        int length = str.length();
+//        char[] ch = str.toCharArray();
+//        if(ch.length >0)
+//        {
+//            for (int i =0;i<ch.length;i++)
+//            {
+//                if((int)ch[i] > 127)
+//                {
+//                    length++;
+//                }
+//            }
+//        }
+//        if(length<0 || length >10)
+//        {
+//            return false;
+//        }
+//
+//        return true;
+//    }
 
 }

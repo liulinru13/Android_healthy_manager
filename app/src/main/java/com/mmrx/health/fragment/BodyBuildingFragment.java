@@ -4,19 +4,22 @@ package com.mmrx.health.fragment;
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.lidroid.xutils.DbUtils;
 import com.lidroid.xutils.exception.DbException;
 import com.mmrx.health.R;
 import com.mmrx.health.activity.BodyBuildingSettingActivity;
 import com.mmrx.health.bean.BodyBuildingBean;
+import com.mmrx.health.util.BitmapCache;
 import com.mmrx.health.util.Constant;
 import com.mmrx.health.util.L;
 import com.mmrx.health.util.SPutil;
@@ -36,7 +39,7 @@ public class BodyBuildingFragment extends Fragment {
     List<BodyBuildingBean> mlist;
 //    MetroAdapter mMetroAdapter;
     DbUtils mDb;
-    TextView adf;
+    Button adf;
 
     MetroView[] metroArr = new MetroView[7];
     final int mertoViewID[] = new int[]{R.id.body_metor_1_1,R.id.body_metor_1_2,R.id.body_metor_2_1,
@@ -86,7 +89,7 @@ public class BodyBuildingFragment extends Fragment {
         /**
          * 测试按钮
          * */
-        adf = (TextView)mInflater.findViewById(R.id.test);
+        adf = (Button)mInflater.findViewById(R.id.body_but_dismiss);
         adf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,8 +98,13 @@ public class BodyBuildingFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        RelativeLayout back = (RelativeLayout)mInflater.findViewById(R.id.fragment_build_layout);
+        back.setBackground(new BitmapDrawable(getResources(),
+                BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_build,
+                        getActivity(),30,false)));
 
-     }
+
+    }
 
     @Override
     public void onResume() {

@@ -104,8 +104,10 @@
     <color name="gray_press">#b7b6b6</color>
     <color name="red">#e64c4e</color>
     <color name="red_pressed">#ffe61702</color>
-    <color name="tran">#00000000</color>
+    <color name="red_trans">#b6e64c4e</color>
+    <color name="tran">#23ffffff</color>
     <color name="white">#fff</color>
+    <color name="white_trans">#64ffffff</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr format="dimension" name="itemPadding"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ActionBarWindow"><attr format="boolean" name="windowActionBar"/><attr format="boolean" name="windowActionBarOverlay"/><attr format="boolean" name="windowSplitActionBar"/><attr format="dimension|fraction" name="windowFixedWidthMajor"/><attr format="dimension|fraction" name="windowFixedHeightMinor"/><attr format="dimension|fraction" name="windowFixedWidthMinor"/><attr format="dimension|fraction" name="windowFixedHeightMajor"/></declare-styleable>
@@ -202,7 +204,7 @@
     <string name="body_detail_card_type">卡片样式：</string>
     <string name="body_detail_card_type_prompt">请选择卡片样式</string>
     <string name="body_detail_detail">详细内容：</string>
-    <string name="body_detail_detail_hint">十个汉字以内</string>
+    <string name="body_detail_detail_hint">四个汉字以内</string>
     <string name="body_detail_is_check">是否打卡：</string>
     <string name="body_detail_is_check_no">否</string>
     <string name="body_detail_is_check_yse">是</string>
@@ -211,7 +213,8 @@
     <string name="body_detail_quit">取消保存</string>
     <string name="body_detail_save">保存计划</string>
     <string name="body_detail_title">计划名称：</string>
-    <string name="body_detail_title_hint">五个汉字以内</string>
+    <string name="body_detail_title_hint">三个汉字以内</string>
+    <string name="body_plan_setting">计划设置</string>
     <string name="body_title">健身计划</string>
     <string name="bottom_bar_bui_str">健身</string>
     <string name="bottom_bar_eat_str">饮食</string>
@@ -229,7 +232,8 @@
     <string name="eat_layout_crop">主食：</string>
     <string name="eat_layout_meat">肉类：</string>
     <string name="eat_layout_result">计算</string>
-    <string name="eat_layout_title">今日摄入量(单位：克)</string>
+    <string name="eat_layout_title">今日热量计算</string>
+    <string name="eat_layout_title_description">摄入量(单位：克)</string>
     <string name="eat_layout_vegatable">蔬菜：</string>
     <string name="female">女</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -261,6 +265,7 @@
     <string name="tab_item_medi_notice_str">我的服药提醒</string>
     <string name="tab_item_medi_str">我的药品录入</string>
     <string name="tab_item_mood_str">我的心情记录</string>
+    <string name="tab_item_perinfo_str">修改个人信息</string>
     <string name="tab_item_quit_str">退出当前记录</string>
     <string name="title_activity_alarm">AlarmActivity</string>
     <string name="title_activity_alert">AlertActivity</string>
@@ -307,6 +312,23 @@
         <item name="android:textColor">@color/black</item>
 
     </style>
+    <style name="FragmentFormTextSytle">
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:textSize">@dimen/text_size_media</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="FragmentFormTextTitleDesSytle">
+        <item name="android:textSize">@dimen/text_size_media</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+    <style name="FragmentFormTextTitleSytle">
+        <item name="android:textSize">50dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginTop">60dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
     <style name="MetroLayoutStyle">
         <item name="android:orientation">horizontal</item>
         <item name="android:paddingTop">5dp</item>
@@ -314,6 +336,12 @@
         <item name="android:paddingRight">5dp</item>
         <item name="android:layout_height">110dp</item>
         <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="MyEditStyle">
+        <item name="android:background">@drawable/edit_bound</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_media</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
     </style>
     <style name="RowStyle_large" parent="FormTextTitleSytle">
         <item name="android:layout_height">@dimen/body_build_detail_row_height</item>

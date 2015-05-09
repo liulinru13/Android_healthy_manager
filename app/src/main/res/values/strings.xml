@@ -23,6 +23,7 @@
     <!--tab_item-->
     <string name="tab_item_mood_str">我的心情记录</string>
     <string name="tab_item_medi_str">我的药品录入</string>
+    <string name="tab_item_perinfo_str">修改个人信息</string>
     <string name="tab_item_medi_notice_str">我的服药提醒</string>
     <string name="tab_item_quit_str">退出当前记录</string>
 
@@ -42,7 +43,8 @@
     <string name="sleep_sleep_notice_str">点击开启早睡提醒>></string>
 
     <!--fragment_eat-->
-    <string name="eat_layout_title">今日摄入量(单位：克)</string>
+    <string name="eat_layout_title">今日热量计算</string>
+    <string name="eat_layout_title_description">摄入量(单位：克)</string>
     <string name="eat_layout_vegatable">蔬菜：</string>
     <string name="eat_layout_meat">肉类：</string>
     <string name="eat_layout_crop">主食：</string>
@@ -87,6 +89,7 @@
     <string name="action_settings">Settings</string>
 
     <!--bodyBuilding-->
+    <string name="body_plan_setting">计划设置</string>
     <string name="body_title">健身计划</string>
     <string name="body_check_str">已打卡</string>
     <string name="body_day_str">天</string>
@@ -95,9 +98,9 @@
 
     <!--bodyBuilding detail-->
     <string name="body_detail_title">计划名称：</string>
-    <string name="body_detail_title_hint">五个汉字以内</string>
+    <string name="body_detail_title_hint">三个汉字以内</string>
     <string name="body_detail_detail">详细内容：</string>
-    <string name="body_detail_detail_hint">十个汉字以内</string>
+    <string name="body_detail_detail_hint">四个汉字以内</string>
     <string name="body_detail_plan_type">运动类型：</string>
     <string name="body_detail_plan_type_prompt">请选择运动类型</string>
     <string name="body_detail_card_type">卡片样式：</string>

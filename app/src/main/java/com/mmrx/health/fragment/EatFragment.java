@@ -1,17 +1,20 @@
 package com.mmrx.health.fragment;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.app.Fragment;
+import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 
 import com.mmrx.health.R;
 import com.mmrx.health.activity.ResultActivity;
+import com.mmrx.health.util.BitmapCache;
 import com.mmrx.health.util.MyToast;
 
 public class EatFragment extends Fragment {
@@ -74,9 +77,12 @@ public class EatFragment extends Fragment {
 				startActivity(intent);
 			}
 		});
-		
-		
-		
+
+        RelativeLayout back = (RelativeLayout)getView().findViewById(R.id.fragment_eat_layout);
+        back.setBackground(new BitmapDrawable(getResources(),
+                BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_food,
+                        getActivity(),15,false)));
+
 	}
 	
 

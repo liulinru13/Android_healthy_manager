@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_build_layout"
     android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    style="@style/ActivityMarginStyle">
+    android:layout_width="match_parent">
 
-    <LinearLayout
-        android:id="@+id/fragment_body_layout"
+
+    <ScrollView
+        android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/test"
-            android:layout_width="match_parent"
-            android:layout_height="144dp"
-            android:text="添"
-            android:textSize="100dp"
-            android:gravity="center"/>
-    </LinearLayout>
-    <ScrollView
-        android:layout_below="@id/fragment_body_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        style="@style/ActivityMarginStyle"
+        android:id="@+id/scrollView">
 
         <LinearLayout
             android:id="@+id/body_building_linearlayout"
@@ -106,5 +95,17 @@
         </LinearLayout>
     </ScrollView>
 
+    <Button
+        android:id="@+id/body_but_dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_transparent"
+        android:text="@string/body_plan_setting"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_media"
+        style="@style/ActivityMarginStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

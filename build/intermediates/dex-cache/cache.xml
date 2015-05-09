@@ -5,7 +5,7 @@
         jar="G:\GitHub\Android_manager\app\build\intermediates\exploded-aar\Android_manager.lib\swipelistview\unspecified\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="3d83a2c509d4bc591c8e3b30bf8a87142b317256">
+        sha1="875e41d9b2c472cb52890c6d6ba85940a5a802a9">
         <dex dex="G:\GitHub\Android_manager\app\build\intermediates\pre-dexed\debug\classes-e34427cfddc3ae98cccfb5816c49003380b3c19d.jar" />
     </item>
     <item
@@ -33,7 +33,7 @@
         jar="G:\GitHub\Android_manager\app\build\intermediates\exploded-aar\Android_manager.lib\metrolayout\unspecified\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="abf1f374997f9819835a30c2655953ae24340400">
+        sha1="fcebc5ce8b3759ff9b2398862f9408d7cf2ecb1d">
         <dex dex="G:\GitHub\Android_manager\app\build\intermediates\pre-dexed\debug\classes-5682295e3c85ae31fa26d2a807be604108ee08e2.jar" />
     </item>
     <item

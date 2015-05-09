@@ -25,6 +25,7 @@ import com.mmrx.health.fragment.DrugFragment;
 import com.mmrx.health.fragment.EatFragment;
 import com.mmrx.health.fragment.SleepFrament;
 import com.mmrx.health.util.Constant;
+import com.mmrx.health.util.L;
 import com.mmrx.health.util.SPutil;
 
 public class ManageActivity extends BaseActivity implements OnClickListener {
@@ -102,8 +103,8 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
 	}
 
     @Override
-    protected void onResume() {
-        super.onResume();
+    protected void onStart() {
+        super.onStart();
         String tag = getIntent().getStringExtra(Constant.FRAGMENT_TAG);
         if(tag == null)
             return;
@@ -301,7 +302,7 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
 		TextView tv2 = (TextView) dialog.findViewById(R.id.tab_tv2);
 		TextView tv3 = (TextView) dialog.findViewById(R.id.tab_tv3);
 		TextView tv4 = (TextView) dialog.findViewById(R.id.tab_tv4);
-		// tv1.getLayoutParams().width=ScreenUtils.getScreenWidth(FirstActivity.this)-10;
+        TextView tv5 = (TextView) dialog.findViewById(R.id.tab_tv5);
 
 		tv1.setOnClickListener(new OnClickListener() {
 			
@@ -309,8 +310,6 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
 				// TODO Auto-generated method stub
 				/**
 				 * 我的晴雨表
-				 * 
-				 * 
 				 */
 				
 				Intent intent=new Intent(ManageActivity.this,MoodActivity.class);
@@ -362,6 +361,19 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
 				finish();
 			}
 		});
+
+        tv5.setOnClickListener(new OnClickListener() {
+
+            public void onClick(View arg0) {
+                // TODO Auto-generated method stub
+                /**
+                 * 个人信息设置;
+                 */
+                L.i("个人信息设置");
+                dialog.cancel();
+
+            }
+        });
 	}
 
 //    //将软键盘关掉

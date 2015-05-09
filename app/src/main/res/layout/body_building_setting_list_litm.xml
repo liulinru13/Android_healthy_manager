@@ -45,7 +45,7 @@
 
             <TextView
                 android:id="@+id/build_tv_title"
-                android:layout_width="wrap_content"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:text="健身计划的名字"
                 android:textColor="@color/black"
@@ -55,7 +55,7 @@
                 />
             <TextView
                 android:id="@+id/build_tv_detail"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:maxEms="15"
                 android:maxLines="1"
