@@ -2,6 +2,7 @@ package com.mmrx.health.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.text.TextPaint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -84,15 +85,21 @@ public class MoodAdapter extends BaseAdapter{
 		switch (state) {
 		case 1:
             holder.contentText.setTextColor(Color.GREEN);
-			s_state="心情好";
+            TextPaint tp = holder.contentText.getPaint();
+            tp.setFakeBoldText(true);
+			s_state="心情好  ";
 			break;
 		case 2:
             holder.contentText.setTextColor(Color.BLUE);
-			s_state="心情一般";
+            TextPaint tp2 = holder.contentText.getPaint();
+            tp2.setFakeBoldText(true);
+			s_state="心情一般  ";
 			break;
 		case 3:
             holder.contentText.setTextColor(Color.RED);
-			s_state="心情不好";
+            TextPaint tp3 = holder.contentText.getPaint();
+            tp3.setFakeBoldText(true);
+			s_state="心情不好  ";
 			break;
 
 		default:

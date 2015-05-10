@@ -63,6 +63,8 @@
     <string name="drug_save_month_num">个月</string>
     <string name="drug_save_submit">提交</string>
 
+    <string name="return_str">返回</string>
+
     <!--mood-->
     <string name="mood_sure">确定</string>
     <string name="mood_default">您还没有心情记录</string>

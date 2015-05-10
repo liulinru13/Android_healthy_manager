@@ -93,7 +93,7 @@ public class DrugFragment extends Fragment {
         RelativeLayout back = (RelativeLayout)getView().findViewById(R.id.fragment_drug_layout);
         back.setBackground(new BitmapDrawable(getResources(),
                 BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_drug,
-                        getActivity(),2,false)));
+                        getActivity(),15,false)));
 	}
 	
 	

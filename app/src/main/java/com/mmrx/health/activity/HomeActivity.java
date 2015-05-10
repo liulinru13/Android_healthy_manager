@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.mmrx.health.BaseActivity;
 import com.mmrx.health.R;
-import com.mmrx.health.util.BitmapCache;
 import com.mmrx.health.util.SPutil;
 
 import java.text.DecimalFormat;
@@ -107,19 +106,19 @@ public class HomeActivity extends BaseActivity {
 				
 			};
 		}.start();
-        new Thread(){
-            @Override
-            public void run() {
-                BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_food,
-                        HomeActivity.this,10, false);
-                BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_sleep,
-                        HomeActivity.this,15, false);
-                BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_build,
-                        HomeActivity.this,2, false);
-                BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_drug,
-                        HomeActivity.this,30, false);
-            }
-        }.start();
+//        new Thread(){
+//            @Override
+//            public void run() {
+//                BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_food,
+//                        HomeActivity.this,10, false);
+//                BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_sleep,
+//                        HomeActivity.this,15, false);
+//                BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_build,
+//                        HomeActivity.this,2, false);
+//                BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_drug,
+//                        HomeActivity.this,30, false);
+//            }
+//        }.start();
 	}
 
 	private void init() {

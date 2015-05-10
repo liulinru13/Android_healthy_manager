@@ -30,7 +30,7 @@
         swipe:swipeCloseAllItemsWhenMoveList="true"
         swipe:swipeFrontView="@+id/front"
         swipe:swipeMode="left"
-        swipe:swipeOffsetLeft="260dp"
+        swipe:swipeOffsetLeft="280dp"
         swipe:swipeOpenOnLongPress="false"/>
 
 </RelativeLayout><!-- From: file:/G:/GitHub/Android_manager/app/src/main/res/layout/fragment_drug.xml -->

@@ -1,8 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/perinfo_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/activity_horizontal_margin"
     tools:context=".LogActivity" >
 
     <TextView
@@ -11,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/log_info"
-        style="@style/FormTextTitleSytle"/>
+        style="@style/FragmentFormTextTitleSytle"/>
 
     <LinearLayout
         android:id="@+id/log_lay_name"
@@ -25,31 +26,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/log_name"
-            style="@style/FormTextSytle"/>
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            style="@style/FragmentFormTextTitleDesSytle"/>
 
         <EditText
             android:id="@+id/log_et_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            style="@style/MyEditStyle"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/log_lay_tall"
         android:layout_below="@+id/log_lay_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        
+        android:layout_marginTop="20dp"
         android:orientation="horizontal" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/log_height"
-            style="@style/FormTextSytle"/>
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            style="@style/FragmentFormTextTitleDesSytle"/>
 
         <EditText
             android:id="@+id/log_et_tall"
             android:layout_width="match_parent"
             android:inputType="number"
+            style="@style/MyEditStyle"
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
@@ -57,18 +62,21 @@
         android:layout_below="@+id/log_lay_tall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/log_weight"
-            style="@style/FormTextSytle"/>
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            style="@style/FragmentFormTextTitleDesSytle"/>
 
         <EditText
             android:id="@+id/log_et_weight"
             android:layout_width="match_parent"
             android:inputType="number"
+            style="@style/MyEditStyle"
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
@@ -76,18 +84,21 @@
         android:layout_below="@+id/log_lay_weight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/log_age"
-            style="@style/FormTextSytle"/>
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            style="@style/FragmentFormTextTitleDesSytle"/>
 
         <EditText
             android:id="@+id/log_et_age"
             android:layout_width="match_parent"
             android:inputType="number"
+            style="@style/MyEditStyle"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
@@ -96,13 +107,15 @@
         android:layout_below="@+id/log_lay_age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/log_sex"
-            style="@style/FormTextSytle"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            style="@style/FragmentFormTextTitleDesSytle"
             android:layout_gravity="center_vertical"/>
 
         <RadioGroup 
@@ -116,25 +129,49 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/male"
+                android:textColor="@color/white"
                 style="@style/FormTextSytle"/>
               <RadioButton 
                 android:id="@+id/log_rb_female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/female"
+                android:textColor="@color/white"
                 style="@style/FormTextSytle"/>
         </RadioGroup>
     </LinearLayout>
     
-    <Button 
-        android:id="@+id/log_but_dismiss"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/drug_save_submit"
-        android:textSize="@dimen/text_size_media"
-        android:background="@drawable/button"
-        style="@style/ActivityMarginStyle"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/log_lay_gender"/>
+        android:orientation="horizontal"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/log_but_dismiss"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/drug_save_submit"
+            android:textSize="@dimen/text_size_media"
+            android:textColor="@color/white"
+            android:background="@drawable/button_transparent"
+            style="@style/ActivityMarginStyle"
+            />
+
+        <Button
+            android:id="@+id/log_but_return"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/return_str"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_media"
+            android:background="@drawable/button_transparent"
+            style="@style/ActivityMarginStyle"
+            android:visibility="gone"
+            />
+    </LinearLayout>
     
 </RelativeLayout>

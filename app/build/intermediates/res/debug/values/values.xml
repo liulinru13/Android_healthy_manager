@@ -259,6 +259,7 @@
     <string name="result_calorie_now">您当前摄入热量为：</string>
     <string name="result_result_default">  计算结果为一般情况，食物中如果含有高蛋白，高油脂，油炸类食物，摄入量会高1~2倍不等，具体情况具体分析，倡导大家要保持身材哦！！！</string>
     <string name="result_title">您当前的的bmi指数为：</string>
+    <string name="return_str">返回</string>
     <string name="sleep_age_str">您的年龄为：</string>
     <string name="sleep_sleep_notice_str">点击开启早睡提醒>></string>
     <string name="sleep_sleep_str">最佳睡眠时间为：</string>
@@ -340,6 +341,12 @@
     <style name="MyEditStyle">
         <item name="android:background">@drawable/edit_bound</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_media</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+    </style>
+    <style name="MyEditStyle_orange">
+        <item name="android:background">@drawable/edit_bound_orange</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/text_size_media</item>
         <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
     </style>

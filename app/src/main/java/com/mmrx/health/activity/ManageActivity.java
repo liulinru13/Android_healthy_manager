@@ -371,6 +371,9 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
                  */
                 L.i("个人信息设置");
                 dialog.cancel();
+                Intent intent=new Intent(ManageActivity.this,LogActivity.class);
+                intent.putExtra(Constant.FRAGMENT_TAG,getFragmentTag());
+                startActivity(intent);
 
             }
         });

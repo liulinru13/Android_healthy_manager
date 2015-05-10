@@ -22,17 +22,20 @@
         <EditText
             android:id="@+id/mood_et_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:maxLines="1"
+            android:layout_gravity="center_vertical"
+            style="@style/MyEditStyle_orange"
             android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
 
         <Button
             android:id="@+id/mood_but_dismiss"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="3"
             android:textSize="@dimen/text_size_small"
+            android:layout_gravity="center_vertical"
             android:text="@string/mood_sure"
             android:background="@drawable/button"/>
     </LinearLayout>

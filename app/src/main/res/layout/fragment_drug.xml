@@ -30,7 +30,7 @@
         swipe:swipeCloseAllItemsWhenMoveList="true"
         swipe:swipeFrontView="@+id/front"
         swipe:swipeMode="left"
-        swipe:swipeOffsetLeft="260dp"
+        swipe:swipeOffsetLeft="280dp"
         swipe:swipeOpenOnLongPress="false"/>
 
 </RelativeLayout>
