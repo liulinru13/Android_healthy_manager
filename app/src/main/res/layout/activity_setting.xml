@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -8,13 +9,21 @@
         android:layout_width="match_parent"
         layout="@layout/title_bar"
         android:layout_alignParentTop="true"/>
-   
-   <ListView 
-       android:id="@+id/set_list"
-       android:layout_below="@id/titlebar_layout"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       />
+
+    <com.fortysevendeg.swipelistview.SwipeListView
+        android:id="@+id/set_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="#00000000"
+        swipe:swipeActionRight="reveal"
+        swipe:swipeAnimationTime="0"
+        swipe:swipeBackView="@+id/back"
+        swipe:swipeCloseAllItemsWhenMoveList="true"
+        swipe:swipeFrontView="@+id/front"
+        swipe:swipeMode="left"
+        swipe:swipeOffsetLeft="280dp"
+        swipe:swipeOpenOnLongPress="false"
+        android:layout_below="@id/titlebar_layout"/>
    
 
 </RelativeLayout>

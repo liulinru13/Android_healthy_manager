@@ -18,6 +18,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.lidroid.xutils.DbUtils;
+import com.lidroid.xutils.exception.DbException;
 import com.mmrx.health.BaseActivity;
 import com.mmrx.health.R;
 import com.mmrx.health.fragment.BodyBuildingFragment;
@@ -358,6 +360,12 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
 				dialog.cancel();
                 SPutil sPutil = new SPutil(getApplicationContext());
                 sPutil.WriteLogin(false);
+                DbUtils dbUtils = DbUtils.create(ManageActivity.this);
+                try {
+                    dbUtils.dropDb();
+                }catch (DbException dbe){
+                    dbe.printStackTrace();
+                }
 				finish();
 			}
 		});

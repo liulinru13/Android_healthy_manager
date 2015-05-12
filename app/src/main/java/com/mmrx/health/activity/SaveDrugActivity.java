@@ -1,12 +1,14 @@
 package com.mmrx.health.activity;
 
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lidroid.xutils.DbUtils;
@@ -15,6 +17,7 @@ import com.mmrx.health.BaseActivity;
 import com.mmrx.health.R;
 import com.mmrx.health.bean.Drug;
 import com.mmrx.health.fragment.DrugFragment;
+import com.mmrx.health.util.BitmapCache;
 import com.mmrx.health.util.Constant;
 import com.mmrx.health.util.MyToast;
 
@@ -57,6 +60,11 @@ public class SaveDrugActivity extends BaseActivity implements OnClickListener{
 
         mBackBut = (ImageButton)findViewById(R.id.title_bar_back);
         mBackBut.setOnClickListener(this);
+
+        LinearLayout back = (LinearLayout)findViewById(R.id.save_drug_layout);
+        back.setBackground(new BitmapDrawable(getResources(),
+                BitmapCache.getInstance().getBitmapBlur(R.drawable.background_save_drug,
+                        this,5,false)));
 
         mTitleTv = (TextView)findViewById(R.id.title_bar_title);
         mTitleTv.setText("药品录入");

@@ -11,11 +11,13 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.TextView;
 
+import com.fortysevendeg.swipelistview.SwipeListView;
 import com.lidroid.xutils.DbUtils;
 import com.lidroid.xutils.exception.DbException;
 import com.mmrx.health.R;
 import com.mmrx.health.bean.Drug;
 import com.mmrx.health.fragment.DrugFragment;
+import com.mmrx.health.util.L;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +29,7 @@ public class SetAdapter extends BaseAdapter {
 	List<Integer> n_list;
 	DbUtils dbUtils;
 	Context context;
-	
+	SwipeListView mSwipeList;
 	public List<Integer> getN_list() {
 		return n_list;
 	}
@@ -35,12 +37,13 @@ public class SetAdapter extends BaseAdapter {
 		super();
 	}
 	
-	public SetAdapter(List<Drug> list,Context v){
+	public SetAdapter(List<Drug> list,Context v,SwipeListView mSwipeList){
 		this.list=list;
 		this.context= v;
 		this.inflater=LayoutInflater.from(v);
 		n_list=new ArrayList<Integer>();
 		dbUtils=DbUtils.create(v);
+        this.mSwipeList = mSwipeList;
 	}
 	public List<Drug> getList() {
 		return list;
@@ -72,15 +75,22 @@ public class SetAdapter extends BaseAdapter {
 	}
 
 	public View getView(final int position, View v, ViewGroup arg2) {
-		v=inflater.inflate(R.layout.setitem, null);
-		CheckBox cb = (CheckBox) v.findViewById(R.id.sitem_cb);
-		TextView tv = (TextView) v.findViewById(R.id.sitem_tv);
-		tv.setText(list.get(position).getName());
+        ViewHolder holder = null;
+        if(v == null){
+            v=inflater.inflate(R.layout.drug_list_item, null);
+            holder = new ViewHolder();
+            holder.isAlarm = (CheckBox) v.findViewById(R.id.sitem_cb);
+            holder.drugName = (TextView) v.findViewById(R.id.sitem_tv);
+            holder.deleteTv = (TextView) v.findViewById(R.id.drug_tv_delete);
+            v.setTag(holder);
+        }else{
+            holder = (ViewHolder)v.getTag();
+        }
+        holder.drugName.setText(list.get(position).getName());
 		if (list.get(position).isEdible()) {
-			cb.setChecked(true);
-			System.out.println("ִ��");
+            holder.isAlarm.setChecked(true);
 		}
-		cb.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        holder.isAlarm.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			
 			public void onCheckedChanged(CompoundButton arg0, boolean f) {
 				// TODO Auto-generated method stub
@@ -89,27 +99,39 @@ public class SetAdapter extends BaseAdapter {
 				try {
 					dbUtils.update(drug, "isEdible");
 					Intent intent=new Intent();
+                    intent.setFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
 					intent.setAction(DrugFragment.ACTION);
 					context.sendBroadcast(intent);
 				} catch (DbException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-//				if (f) {
-//					if (!n_list.contains(position)) {
-//						n_list.add(position);
-//					}
-//				}else{
-//					if (n_list.contains(position)) {
-//						n_list.remove(position);
-//					}
-//				}
+
 			}
 		});
-		
-		
+
+        holder.deleteTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Drug drug_temp = list.remove(position);
+                L.i("MoodAdapter-deletebn");
+                try{
+                    dbUtils.deleteById(Drug.class,drug_temp.getId());
+                }catch (com.lidroid.xutils.exception.DbException dbe){
+                    dbe.printStackTrace();
+                }
+                notifyDataSetChanged();
+                mSwipeList.closeOpenedItems();
+            }
+        });
 		
 		return v;
 	}
+
+    private class ViewHolder{
+        TextView drugName;
+        CheckBox isAlarm;
+        TextView deleteTv;
+    }
 
 }

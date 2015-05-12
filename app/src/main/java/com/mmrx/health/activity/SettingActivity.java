@@ -5,9 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.TextView;
 
+import com.fortysevendeg.swipelistview.BaseSwipeListViewListener;
+import com.fortysevendeg.swipelistview.SwipeListView;
 import com.lidroid.xutils.DbUtils;
 import com.lidroid.xutils.exception.DbException;
 import com.mmrx.health.BaseActivity;
@@ -15,6 +16,7 @@ import com.mmrx.health.R;
 import com.mmrx.health.adapter.SetAdapter;
 import com.mmrx.health.bean.Drug;
 import com.mmrx.health.util.Constant;
+import com.mmrx.health.util.L;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,9 +30,9 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     TextView mTitleTv;
     Button but_more;
 
-	ListView list;
 	List<Drug> d_list;
-	private SetAdapter setAdapter;
+	SetAdapter setAdapter;
+    SwipeListView mSwipeList;
 	DbUtils dbUtils;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +48,12 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
         mTitleTv.setText("服药提醒");
         but_more = (Button)findViewById(R.id.title_bar_menu);
         but_more.setVisibility(View.GONE);
+
+        mSwipeList = (SwipeListView)findViewById(R.id.set_list);
+        mSwipeList.setSwipeListViewListener(new SwipeListViewListener());
+
         mFragmentTag = getIntent().getStringExtra(Constant.FRAGMENT_TAG);
 
-        list = (ListView) findViewById(R.id.set_list);
 
         dbUtils=DbUtils.create(getApplicationContext());
         try {
@@ -61,8 +66,8 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
             e.printStackTrace();
         }
 
-        setAdapter = new SetAdapter(d_list, getApplicationContext());
-        list.setAdapter(setAdapter);
+        setAdapter = new SetAdapter(d_list, getApplicationContext(),mSwipeList);
+        mSwipeList.setAdapter(setAdapter);
     }
 
     @Override
@@ -78,5 +83,24 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
                 break;
         }
     }
+
+    class SwipeListViewListener extends BaseSwipeListViewListener {
+
+        @Override
+        public void onClickFrontView(int position) {
+            super.onClickFrontView(position);
+//            Toast.makeText(getApplicationContext(), d_list.get(position).toString(), Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onDismiss(int[] reverseSortedPositions) {
+            for (int position : reverseSortedPositions) {
+                L.i("SwipeListViewListener-onDismiss");
+                d_list.remove(position);
+            }
+            setAdapter.notifyDataSetChanged();
+        }
+    }
+
 
 }

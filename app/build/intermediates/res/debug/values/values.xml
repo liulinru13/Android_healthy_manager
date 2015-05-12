@@ -223,12 +223,13 @@
     <string name="drug_layout_default_str">暂时没有药品哦~！！</string>
     <string name="drug_save_drug_name_str">药物名称：</string>
     <string name="drug_save_drug_produce_time">生产日期：</string>
-    <string name="drug_save_guarantee_period">保 质 期：</string>
+    <string name="drug_save_guarantee_period">保质期日：</string>
     <string name="drug_save_month">月</string>
     <string name="drug_save_month_num">个月</string>
     <string name="drug_save_submit">提交</string>
     <string name="drug_save_title">药品录入</string>
     <string name="drug_save_year">年</string>
+    <string name="drug_setting_isalarm">是否提示</string>
     <string name="eat_layout_crop">主食：</string>
     <string name="eat_layout_meat">肉类：</string>
     <string name="eat_layout_result">计算</string>
@@ -341,6 +342,12 @@
     <style name="MyEditStyle">
         <item name="android:background">@drawable/edit_bound</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_media</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+    </style>
+    <style name="MyEditStyle_gray">
+        <item name="android:background">@drawable/edit_bound_gray</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/text_size_media</item>
         <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
     </style>

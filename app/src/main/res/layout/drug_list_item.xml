@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/red"
+        android:gravity="center|right"
+        android:weightSum="1">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_delete"
+            android:layout_weight="0.05" />
+        <TextView
+            android:id="@+id/drug_tv_delete"
+            android:layout_width="60dp"
+            android:layout_marginRight="@dimen/element_horizontal_margin"
+            android:layout_height="match_parent"
+            android:text="@string/mood_delete"
+            android:layout_gravity="center"
+            android:textSize="@dimen/text_size_media"
+            android:textColor="@color/gray_default"
+            android:gravity="center_horizontal|center_vertical"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/front"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:background="@color/white" >
+        <TextView
+            android:id="@+id/sitem_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="药品名称"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+        <CheckBox
+            android:id="@+id/sitem_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/drug_setting_isalarm"
+            android:textColor="@color/black"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+    </RelativeLayout>
+
+</FrameLayout>

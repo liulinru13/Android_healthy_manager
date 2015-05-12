@@ -59,7 +59,7 @@
     <string name="drug_save_drug_produce_time">生产日期：</string>
     <string name="drug_save_year">年</string>
     <string name="drug_save_month">月</string>
-    <string name="drug_save_guarantee_period">保 质 期：</string>
+    <string name="drug_save_guarantee_period">保质期日：</string>
     <string name="drug_save_month_num">个月</string>
     <string name="drug_save_submit">提交</string>
 
@@ -81,6 +81,8 @@
     <string name="log_age">年龄：</string>
     <string name="log_sex">性别：</string>
 
+    <!-- drug setting-->
+    <string name="drug_setting_isalarm">是否提示</string>
 
     <!--result-->
     <string name="result_title">您当前的的bmi指数为：</string>
