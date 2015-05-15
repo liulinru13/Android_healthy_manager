@@ -14,7 +14,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/manager"
+        android:icon="@drawable/user"
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"

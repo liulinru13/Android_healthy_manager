@@ -22,6 +22,9 @@ import com.lidroid.xutils.DbUtils;
 import com.lidroid.xutils.exception.DbException;
 import com.mmrx.health.BaseActivity;
 import com.mmrx.health.R;
+import com.mmrx.health.bean.BodyBuildingBean;
+import com.mmrx.health.bean.Drug;
+import com.mmrx.health.bean.Mood;
 import com.mmrx.health.fragment.BodyBuildingFragment;
 import com.mmrx.health.fragment.DrugFragment;
 import com.mmrx.health.fragment.EatFragment;
@@ -362,11 +365,18 @@ public class ManageActivity extends BaseActivity implements OnClickListener {
                 sPutil.WriteLogin(false);
                 DbUtils dbUtils = DbUtils.create(ManageActivity.this);
                 try {
-                    dbUtils.dropDb();
+                    dbUtils.deleteAll(BodyBuildingBean.class);
+                    dbUtils.deleteAll(Mood.class);
+                    dbUtils.deleteAll(Drug.class);
                 }catch (DbException dbe){
                     dbe.printStackTrace();
                 }
-				finish();
+//				finish();
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                android.os.Process.killProcess(android.os.Process.myPid());
 			}
 		});
 
