@@ -320,6 +320,7 @@ int drawable perinfo_background 0x7f020077
 int drawable post_nav_icon 0x7f020078
 int drawable post_nav_icon_press 0x7f020079
 int drawable post_nav_selector 0x7f02007a
+int drawable user 0x7f02007b
 int id action_bar 0x7f090025
 int id action_bar_activity_content 0x7f090000
 int id action_bar_container 0x7f090024

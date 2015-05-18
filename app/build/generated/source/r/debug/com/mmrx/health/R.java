@@ -1043,6 +1043,7 @@ containing a value of this type.
         public static final int post_nav_icon=0x7f020078;
         public static final int post_nav_icon_press=0x7f020079;
         public static final int post_nav_selector=0x7f02007a;
+        public static final int user=0x7f02007b;
     }
     public static final class id {
         public static final int action_bar=0x7f090025;
