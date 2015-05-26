@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.fortysevendeg.swipelistview.BaseSwipeListViewListener;
 import com.fortysevendeg.swipelistview.SwipeListView;
@@ -178,7 +177,7 @@ public class MoodActivity extends BaseActivity implements OnClickListener{
         @Override
         public void onClickFrontView(int position) {
             super.onClickFrontView(position);
-            Toast.makeText(getApplicationContext(), m_list.get(position).toString(), Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), m_list.get(position).toString(), Toast.LENGTH_SHORT).show();
         }
 
         @Override

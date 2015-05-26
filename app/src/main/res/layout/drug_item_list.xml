@@ -72,7 +72,7 @@
                 android:id="@+id/item_tv_state"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="已过期"
+                android:text="过期"
                 android:textSize="@dimen/text_size_small"
                 android:textColor="@color/red"
                 android:layout_weight="1"

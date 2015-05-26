@@ -20,6 +20,7 @@
         <activity
             android:name="com.mmrx.health.MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,55 +31,61 @@
         <activity
             android:name="com.mmrx.health.activity.LogActivity"
             android:label="@string/title_activity_log"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="com.mmrx.health.activity.HomeActivity"
             android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="com.mmrx.health.activity.ManageActivity"
             android:label="@string/title_activity_manage"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
-        </activity>
-        <activity
-            android:name="com.mmrx.health.activity.AlertActivity"
-            android:label="@string/title_activity_alert" >
         </activity>
         <activity
             android:name="com.mmrx.health.activity.AlarmActivity"
             android:label="@string/title_activity_alarm"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="com.mmrx.health.activity.SaveDrugActivity"
             android:label="@string/title_activity_save_drug"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="com.mmrx.health.activity.ResultActivity"
             android:label="@string/title_activity_result"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="com.mmrx.health.activity.MoodActivity"
             android:label="@string/title_activity_mood"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="com.mmrx.health.activity.SettingActivity"
             android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
         </activity>
         <activity
             android:name="com.mmrx.health.BaseActivity"
-            android:label="@string/title_activity_base" >
+            android:label="@string/title_activity_base"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.mmrx.health.activity.BodyBuildingSettingActivity"
             android:label="@string/title_activity_body_building_setting"
             android:parentActivityName="com.mmrx.health.BaseActivity"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -88,6 +95,7 @@
             android:name="com.mmrx.health.activity.BodyBuildingSettingDetailActivity"
             android:label="@string/title_activity_body_building_setting_detail"
             android:parentActivityName="com.mmrx.health.BaseActivity"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

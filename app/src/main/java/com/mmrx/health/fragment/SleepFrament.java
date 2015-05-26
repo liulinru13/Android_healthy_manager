@@ -134,7 +134,10 @@ public class SleepFrament extends Fragment {
 			}
 		});
         RelativeLayout back = (RelativeLayout)getView().findViewById(R.id.fragment_sleep_layou);
-        back.setBackground(new BitmapDrawable(getResources(),
+//        back.setBackground(new BitmapDrawable(getResources(),
+//                BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_sleep,
+//                        getActivity(),15,false)));
+        back.setBackgroundDrawable(new BitmapDrawable(getResources(),
                 BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_sleep,
                         getActivity(),15,false)));
 

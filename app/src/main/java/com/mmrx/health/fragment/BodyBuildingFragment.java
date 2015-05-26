@@ -99,7 +99,10 @@ public class BodyBuildingFragment extends Fragment {
             }
         });
         RelativeLayout back = (RelativeLayout)mInflater.findViewById(R.id.fragment_build_layout);
-        back.setBackground(new BitmapDrawable(getResources(),
+//        back.setBackground(new BitmapDrawable(getResources(),
+//                BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_build,
+//                        getActivity(),30,false)));
+        back.setBackgroundDrawable(new BitmapDrawable(getResources(),
                 BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_build,
                         getActivity(),30,false)));
 

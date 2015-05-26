@@ -79,7 +79,10 @@ public class EatFragment extends Fragment {
 		});
 
         RelativeLayout back = (RelativeLayout)getView().findViewById(R.id.fragment_eat_layout);
-        back.setBackground(new BitmapDrawable(getResources(),
+//        back.setBackground(new BitmapDrawable(getResources(),
+//                BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_food,
+//                        getActivity(),10,false)));
+        back.setBackgroundDrawable(new BitmapDrawable(getResources(),
                 BitmapCache.getInstance().getBitmapBlur(R.drawable.fragment_background_food,
                         getActivity(),10,false)));
 

@@ -70,11 +70,11 @@
     <string name="mood_default">您还没有心情记录</string>
     <string name="mood_good">心情好</string>
     <string name="mood_normal">心情一般</string>
-    <string name="mood_bad">心情不好</string>
+    <string name="mood_bad">心情坏</string>
     <string name="mood_delete">删除</string>
 
     <!--log-->
-    <string name="log_info">请输入您的信息</string>
+    <string name="log_info">输入您的信息</string>
     <string name="log_name">姓名：</string>
     <string name="log_height">身高：</string>
     <string name="log_weight">体重：</string>

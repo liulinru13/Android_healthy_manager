@@ -52,6 +52,8 @@ MERGED from com.android.support:appcompat-v7:19.1.0:19:5
 		ADDED from AndroidManifest.xml:18:9
 activity#com.mmrx.health.MainActivity
 ADDED from AndroidManifest.xml:19:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:23:13
 	android:label
 		ADDED from AndroidManifest.xml:21:13
 	android:theme
@@ -59,114 +61,130 @@ ADDED from AndroidManifest.xml:19:9
 	android:name
 		ADDED from AndroidManifest.xml:20:13
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:23:13
+ADDED from AndroidManifest.xml:25:13
 action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:24:17
-	android:name
-		ADDED from AndroidManifest.xml:24:25
-category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:26:17
 	android:name
-		ADDED from AndroidManifest.xml:26:27
+		ADDED from AndroidManifest.xml:26:25
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:28:17
+	android:name
+		ADDED from AndroidManifest.xml:28:27
 activity#com.mmrx.health.activity.LogActivity
-ADDED from AndroidManifest.xml:29:9
-	android:label
-		ADDED from AndroidManifest.xml:31:13
-	android:theme
-		ADDED from AndroidManifest.xml:32:13
-	android:name
-		ADDED from AndroidManifest.xml:30:13
-activity#com.mmrx.health.activity.HomeActivity
-ADDED from AndroidManifest.xml:34:9
-	android:label
-		ADDED from AndroidManifest.xml:36:13
-	android:theme
-		ADDED from AndroidManifest.xml:37:13
-	android:name
+ADDED from AndroidManifest.xml:31:9
+	android:screenOrientation
 		ADDED from AndroidManifest.xml:35:13
-activity#com.mmrx.health.activity.ManageActivity
-ADDED from AndroidManifest.xml:39:9
 	android:label
-		ADDED from AndroidManifest.xml:41:13
+		ADDED from AndroidManifest.xml:33:13
 	android:theme
-		ADDED from AndroidManifest.xml:42:13
+		ADDED from AndroidManifest.xml:34:13
 	android:name
-		ADDED from AndroidManifest.xml:40:13
-activity#com.mmrx.health.activity.AlertActivity
-ADDED from AndroidManifest.xml:44:9
+		ADDED from AndroidManifest.xml:32:13
+activity#com.mmrx.health.activity.HomeActivity
+ADDED from AndroidManifest.xml:37:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:41:13
 	android:label
+		ADDED from AndroidManifest.xml:39:13
+	android:theme
+		ADDED from AndroidManifest.xml:40:13
+	android:name
+		ADDED from AndroidManifest.xml:38:13
+activity#com.mmrx.health.activity.ManageActivity
+ADDED from AndroidManifest.xml:43:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:47:13
+	android:label
+		ADDED from AndroidManifest.xml:45:13
+	android:theme
 		ADDED from AndroidManifest.xml:46:13
 	android:name
-		ADDED from AndroidManifest.xml:45:13
+		ADDED from AndroidManifest.xml:44:13
 activity#com.mmrx.health.activity.AlarmActivity
-ADDED from AndroidManifest.xml:48:9
+ADDED from AndroidManifest.xml:49:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:53:13
 	android:label
-		ADDED from AndroidManifest.xml:50:13
-	android:theme
 		ADDED from AndroidManifest.xml:51:13
+	android:theme
+		ADDED from AndroidManifest.xml:52:13
 	android:name
-		ADDED from AndroidManifest.xml:49:13
+		ADDED from AndroidManifest.xml:50:13
 activity#com.mmrx.health.activity.SaveDrugActivity
-ADDED from AndroidManifest.xml:53:9
-	android:label
-		ADDED from AndroidManifest.xml:55:13
-	android:theme
-		ADDED from AndroidManifest.xml:56:13
-	android:name
-		ADDED from AndroidManifest.xml:54:13
-activity#com.mmrx.health.activity.ResultActivity
-ADDED from AndroidManifest.xml:58:9
-	android:label
-		ADDED from AndroidManifest.xml:60:13
-	android:theme
-		ADDED from AndroidManifest.xml:61:13
-	android:name
+ADDED from AndroidManifest.xml:55:9
+	android:screenOrientation
 		ADDED from AndroidManifest.xml:59:13
-activity#com.mmrx.health.activity.MoodActivity
-ADDED from AndroidManifest.xml:63:9
 	android:label
+		ADDED from AndroidManifest.xml:57:13
+	android:theme
+		ADDED from AndroidManifest.xml:58:13
+	android:name
+		ADDED from AndroidManifest.xml:56:13
+activity#com.mmrx.health.activity.ResultActivity
+ADDED from AndroidManifest.xml:61:9
+	android:screenOrientation
 		ADDED from AndroidManifest.xml:65:13
-	android:theme
-		ADDED from AndroidManifest.xml:66:13
-	android:name
-		ADDED from AndroidManifest.xml:64:13
-activity#com.mmrx.health.activity.SettingActivity
-ADDED from AndroidManifest.xml:68:9
 	android:label
-		ADDED from AndroidManifest.xml:70:13
+		ADDED from AndroidManifest.xml:63:13
 	android:theme
-		ADDED from AndroidManifest.xml:71:13
+		ADDED from AndroidManifest.xml:64:13
 	android:name
+		ADDED from AndroidManifest.xml:62:13
+activity#com.mmrx.health.activity.MoodActivity
+ADDED from AndroidManifest.xml:67:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:71:13
+	android:label
 		ADDED from AndroidManifest.xml:69:13
-activity#com.mmrx.health.BaseActivity
+	android:theme
+		ADDED from AndroidManifest.xml:70:13
+	android:name
+		ADDED from AndroidManifest.xml:68:13
+activity#com.mmrx.health.activity.SettingActivity
 ADDED from AndroidManifest.xml:73:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:77:13
 	android:label
 		ADDED from AndroidManifest.xml:75:13
+	android:theme
+		ADDED from AndroidManifest.xml:76:13
 	android:name
 		ADDED from AndroidManifest.xml:74:13
-activity#com.mmrx.health.activity.BodyBuildingSettingActivity
-ADDED from AndroidManifest.xml:77:9
+activity#com.mmrx.health.BaseActivity
+ADDED from AndroidManifest.xml:79:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:82:13
 	android:label
-		ADDED from AndroidManifest.xml:80:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:81:13
-	android:theme
-		ADDED from AndroidManifest.xml:79:13
 	android:name
-		ADDED from AndroidManifest.xml:78:13
-meta-data#android.support.PARENT_ACTIVITY
-ADDED from AndroidManifest.xml:82:13
-	android:value
-		ADDED from AndroidManifest.xml:84:17
-	android:name
-		ADDED from AndroidManifest.xml:83:17
-activity#com.mmrx.health.activity.BodyBuildingSettingDetailActivity
-ADDED from AndroidManifest.xml:86:9
-	android:label
+		ADDED from AndroidManifest.xml:80:13
+activity#com.mmrx.health.activity.BodyBuildingSettingActivity
+ADDED from AndroidManifest.xml:84:9
+	android:screenOrientation
 		ADDED from AndroidManifest.xml:89:13
-	android:parentActivityName
-		ADDED from AndroidManifest.xml:90:13
-	android:theme
-		ADDED from AndroidManifest.xml:88:13
-	android:name
+	android:label
 		ADDED from AndroidManifest.xml:87:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:88:13
+	android:theme
+		ADDED from AndroidManifest.xml:86:13
+	android:name
+		ADDED from AndroidManifest.xml:85:13
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from AndroidManifest.xml:90:13
+	android:value
+		ADDED from AndroidManifest.xml:92:17
+	android:name
+		ADDED from AndroidManifest.xml:91:17
+activity#com.mmrx.health.activity.BodyBuildingSettingDetailActivity
+ADDED from AndroidManifest.xml:94:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:99:13
+	android:label
+		ADDED from AndroidManifest.xml:97:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:98:13
+	android:theme
+		ADDED from AndroidManifest.xml:96:13
+	android:name
+		ADDED from AndroidManifest.xml:95:13

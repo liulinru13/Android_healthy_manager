@@ -62,7 +62,10 @@ public class SaveDrugActivity extends BaseActivity implements OnClickListener{
         mBackBut.setOnClickListener(this);
 
         LinearLayout back = (LinearLayout)findViewById(R.id.save_drug_layout);
-        back.setBackground(new BitmapDrawable(getResources(),
+//        back.setBackground(new BitmapDrawable(getResources(),
+//                BitmapCache.getInstance().getBitmapBlur(R.drawable.background_save_drug,
+//                        this,5,false)));
+        back.setBackgroundDrawable(new BitmapDrawable(getResources(),
                 BitmapCache.getInstance().getBitmapBlur(R.drawable.background_save_drug,
                         this,5,false)));
 

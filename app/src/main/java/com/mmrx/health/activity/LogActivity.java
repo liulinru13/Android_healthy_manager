@@ -50,7 +50,10 @@ public class LogActivity extends BaseActivity {
 		
 		ViewUtils.inject(this);
         RelativeLayout back = (RelativeLayout)findViewById(R.id.perinfo_layout);
-        back.setBackground(new BitmapDrawable(getResources(),
+//        back.setBackground(new BitmapDrawable(getResources(),
+//                BitmapCache.getInstance().getBitmapBlur(R.drawable.perinfo_background,
+//                        this,10,false)));
+        back.setBackgroundDrawable(new BitmapDrawable(getResources(),
                 BitmapCache.getInstance().getBitmapBlur(R.drawable.perinfo_background,
                         this,10,false)));
         putil=new SPutil(getApplicationContext());

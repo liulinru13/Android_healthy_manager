@@ -244,13 +244,13 @@
     <string name="home_state">微胖</string>
     <string name="log_age">年龄：</string>
     <string name="log_height">身高：</string>
-    <string name="log_info">请输入您的信息</string>
+    <string name="log_info">输入您的信息</string>
     <string name="log_name">姓名：</string>
     <string name="log_sex">性别：</string>
     <string name="log_weight">体重：</string>
     <string name="male">男</string>
     <string name="menu_settings">Settings</string>
-    <string name="mood_bad">心情不好</string>
+    <string name="mood_bad">心情坏</string>
     <string name="mood_default">您还没有心情记录</string>
     <string name="mood_delete">删除</string>
     <string name="mood_good">心情好</string>
@@ -327,7 +327,7 @@
     <style name="FragmentFormTextTitleSytle">
         <item name="android:textSize">50dp</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:layout_marginTop">60dp</item>
+        <item name="android:layout_marginTop">50dp</item>
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_centerHorizontal">true</item>
     </style>
